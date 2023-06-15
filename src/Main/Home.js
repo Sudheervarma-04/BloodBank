@@ -29,41 +29,41 @@ export default function Home() {
     <div>
       <div
         id="post_carousel"
-        class="carousel slide animate_text post_carousel_wrapper swipe_x ps_easeOutCirc"
+        className="carousel slide animate_text post_carousel_wrapper swipe_x ps_easeOutCirc"
         data-ride="carousel"
       >
-        <ol class="carousel-indicators post_carousel_indicators">
+        <ol className="carousel-indicators post_carousel_indicators">
           <li
             data-target="#post_carousel"
             data-slide-to="0"
-            class="active"
+            className="active"
           ></li>
         </ol>
 
-        <div class="carousel-inner" role="listbox">
-          <div class="carousel-item active">
+        <div className="carousel-inner" role="listbox">
+          <div className="carousel-item active">
             <img src={img2} alt="video" />
           </div>
         </div>
       </div>
-      <div class="container py-4 py-xl-5">
-        <div class="row mb-5">
-          <div class="col-md-8 col-xl-6 text-center mx-auto">
+      <div className="container py-4 py-xl-5">
+        <div className="row mb-5">
+          <div className="col-md-8 col-xl-6 text-center mx-auto">
             <h2 style={{ fontSize: 35 }}>
               <span style={{ textDecoration: "underline" }}>Facilities</span>
             </h2>
           </div>
         </div>
-        <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
-          <div class="col">
+        <div className="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+          <div className="col">
             <div>
               <img
-                class="rounded img-fluid d-block w-100 fit-cover"
+                className="rounded img-fluid d-block w-100 fit-cover"
                 style={{ height: 200 }}
                 src={img3}
                 alt="$"
               />
-              <div class="py-4">
+              <div className="py-4">
                 <center>
                   <h4>
                     <Link to="/donate" style={{ color: "#000000" }}>
@@ -87,14 +87,14 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div class="col">
+          <div className="col">
             <div>
               <img
-                class="rounded img-fluid d-block w-100 fit-cover"
+                className="rounded img-fluid d-block w-100 fit-cover"
                 style={{ height: 200 }}
                 src={img5}
               />
-              <div class="py-4">
+              <div className="py-4">
                 <center>
                   <h4>
                     <Link to="/about" style={{ color: "#000000" }}>
@@ -118,15 +118,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div class="col">
+          <div className="col">
             <div>
               <img
-                class="rounded img-fluid d-block w-100 fit-cover"
+                className="rounded img-fluid d-block w-100 fit-cover"
                 style={{ height: 200 }}
                 src={img4}
                 alt="$"
               />
-              <div class="py-4">
+              <div className="py-4">
                 <center>
                   <h4>
                     <Link to="/request" style={{ color: "#000000" }}>
@@ -153,10 +153,10 @@ export default function Home() {
         </div>
       </div>
       <footer>
-        <div class="row">
-          <div class="col-sm-6 col-md-4 footer-navigation">
+        <div className="row">
+          <div className="col-sm-6 col-md-4 footer-navigation">
             <h3 style={{fontFamily: "sans-serif"}}>GITAMBloodBank</h3>
-            <p class="links">
+            <p className="links">
               <Link to="/donate">Donate</Link>
               <strong> · </strong>
               <Link to="/request">Request</Link>
@@ -165,28 +165,28 @@ export default function Home() {
               <strong>&nbsp;</strong>
             </p>
           </div>
-          <div class="col-sm-6 col-md-4 footer-contacts">
+          <div className="col-sm-6 col-md-4 footer-contacts">
             <div>
               <Link href="https://goo.gl/maps/bFanvvmbxhrSjWVC7" target="_blank">
-                <span class="fa fa-map-marker footer-contacts-icon"> </span>
+                <span className="fa fa-map-marker footer-contacts-icon"> </span>
               </Link>
               <Link href="https://goo.gl/maps/bFanvvmbxhrSjWVC7" target="_blank">
                 <p>
-                  <span class="new-line-span">Gandhi Nagar,Rushikonda</span>
+                  <span className="new-line-span">Gandhi Nagar,Rushikonda</span>
                   Visakhapatnam, Andhra Pradesh-530045
                 </p>
               </Link>
             </div>
             <div>
-              <i class="fa fa-phone footer-contacts-icon"></i>
-              <p class="footer-center-info email text-start">
+              <i className="fa fa-phone footer-contacts-icon"></i>
+              <p className="footer-center-info email text-start">
                 <Link href="#" style={{ color: "#ffffff" }}>
                   +91 98850 96787
                 </Link>
               </p>
             </div>
             <div>
-              <i class="fa fa-envelope footer-contacts-icon"></i>
+              <i className="fa fa-envelope footer-contacts-icon"></i>
               <p>
                 {" "}
                 <Link style={{ color: "rgb(255, 255, 255)" }}>
@@ -195,7 +195,7 @@ export default function Home() {
               </p>
             </div>
           </div>
-          <div class="col-md-4 footer-about">
+          <div className="col-md-4 footer-about">
             <h4>
               <Link href="./aboutus.html" style={{ color: "#ffffff" }}>
                 About
