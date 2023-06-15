@@ -22,30 +22,30 @@ import "../assets/css/Pretty-Registration-Form-.css"
 export default function Request() {
   return (
     <div>        
-    <div class="main col-12" id="section-main">
-        <div class="container mt-0">
-            <div class="signup-content">
-                <div class="signup-img pt-1"> 
+    <div className="main col-12" id="section-main">
+        <div className="container mt-0">
+            <div className="signup-content">
+                <div className="signup-img pt-1"> 
               </div>
-                <div class="signup-form">
-                    <h1 class="heading">REQUEST</h1>
-                    <form method="POST" class="register-form" id="register-form">
-                        <div class="form-row">
-            <div class="form-group">
-                <div class="form-input">
-                    <label for="first_name" class="required">First name</label>
+                <div className="signup-form">
+                    <h1 className="heading">REQUEST</h1>
+                    <form method="POST" className="register-form" id="register-form">
+                        <div className="form-row">
+            <div className="form-group">
+                <div className="form-input">
+                    <label for="first_name" className="required">First name</label>
                     <input  onkeydown="return /[a-z]/i.test(event.key)" id="Patient_name"  name="first_name" placeholder="Enter your name" required />
                 </div>
                 <p id="patient_name_error"></p>
-                <div class="form-input mt-2">
-                    <label for="email" class="required">Email</label>
+                <div className="form-input mt-2">
+                    <label for="email" className="required">Email</label>
                     <input id="patient_email" name="email"  type="email" placeholder="Enter your email" required  />
                 </div>
                 <p id="patient_email_error"></p>
 
-                <div class="form-input">
-                    <div class="label-flex">
-                        <label for="blood-group" class="required">Blood Group</label>
+                <div className="form-input">
+                    <div className="label-flex">
+                        <label for="blood-group" className="required">Blood Group</label>
                     </div>
                     
                         <select name="blood-group" id="PBlood_group_request">
@@ -63,36 +63,36 @@ export default function Request() {
                     
                 </div>
                 <p id="patient_blood_error"></p>
-                <div class="form-input">
-                    <label for="no_of_units" class="required">No Of Units Required</label>
+                <div className="form-input">
+                    <label for="no_of_units" className="required">No Of Units Required</label>
                 
                     <input id="no_of_units" type="number" placeholder="Enter No of units required" required/>
                  </div>
                  <p id="patient_units_error"></p>
             </div>
 
-            <div class="form-group">
-                <div class="form-input">
-                    <label for="first_name" class="required">AGE</label>
+            <div className="form-group">
+                <div className="form-input">
+                    <label for="first_name" className="required">AGE</label>
                     <input type ="number" id="patient_dob"  name="first_name" placeholder="Enter your age" required />
                 </div>
                 <p id="patient_dob_error"></p>
-                <div class="form-input mt-2">
-                    <label for="phone_number" class="required">Phone number</label>
+                <div className="form-input mt-2">
+                    <label for="phone_number" className="required">Phone number</label>
                     <input id="patient_phone" type="tel" onkeypress='return event.charCode >= 48 && event.charCode <= 57' minlength="10" maxlength="10" placeholder="Enter your number" name="phone_number"  required />
                 </div>
                 <p id="patient_phone_error"></p>
 
 
-                <div class="form-input mt-2">
-                    <label for="DOB" class="required">REQUIRED DATE</label>
+                <div className="form-input mt-2">
+                    <label for="DOB" className="required">REQUIRED DATE</label>
                     <input name="DOB" id="required_date" type="date" placeholder="Date of Birth" required />
                     </div>
                     <p id="patient_required_error"></p>
 
-            <div class="form-input mt-2">
-            <div class="label-flex ">
-            <label for="payment" class="required" >Gender</label>
+            <div className="form-input mt-2">
+            <div className="label-flex ">
+            <label for="payment" className="required" >Gender</label>
             </div>  
             <select  id="PGender" >
             <option>Enter Gender</option>
@@ -106,12 +106,12 @@ export default function Request() {
 
             <p id="patient_gender_error"></p>
             </div>
-            <div class="form-input ml-4  col-12 ">
-                <label for="pur" class="required address">Purpose </label>
+            <div className="form-input ml-4  col-12 ">
+                <label for="pur" className="required address">Purpose </label>
          <textarea 
          name="pur"  
          id="purpose_request" 
-         class="col-11" 
+         className="col-11" 
          placeholder="Enter the purpose">
 
          </textarea>
@@ -123,8 +123,8 @@ export default function Request() {
              
            
                        
-                        <div class="form-submit mt-3 ">
-                             <input class="submit" id="submit_request" type="submit" value="Submit" />   
+                        <div className="form-submit mt-3 ">
+                             <input className="submit" id="submit_request" type="submit" value="Submit" />   
                         </div>
                     </form>
                 </div>

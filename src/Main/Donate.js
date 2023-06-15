@@ -4,17 +4,17 @@ export default function Donate() {
   return (
     <>
     <div className="body">
-      <div class="main" id="section-main">
-        <div class="container mt-0">
-          <div class="signup-content">
-            <div class="signup-img pt-1"></div>
-            <div class="signup-form">
-              <h1 class="heading">DONATE</h1>
-              <form method="POST" class="register-form" id="register-form">
-                <div class="form-row">
-                  <div class="form-group">
-                    <div class="form-input">
-                      <label for="first_name" class="required">
+      <div className="main" id="section-main">
+        <div className="container mt-0">
+          <div className="signup-content">
+            <div className="signup-img pt-1"></div>
+            <div className="signup-form">
+              <h1 className="heading">DONATE</h1>
+              <form method="POST" className="register-form" id="register-form">
+                <div className="form-row">
+                  <div className="form-group">
+                    <div className="form-input">
+                      <label for="first_name" className="required">
                         First name
                       </label>
                       <input
@@ -26,8 +26,8 @@ export default function Donate() {
                       />
                     </div>
                     <p id="donator_name_error"></p>
-                    <div class="form-input mt-2">
-                      <label for="email" class="required">
+                    <div className="form-input mt-2">
+                      <label for="email" className="required">
                         Email
                       </label>
                       <input
@@ -40,8 +40,8 @@ export default function Donate() {
                     </div>
                     <p id="donator_email_error"></p>
 
-                    <div class="form-input mt-2">
-                      <label for="phone_number" class="required">
+                    <div className="form-input mt-2">
+                      <label for="phone_number" className="required">
                         Phone number
                       </label>
                       <input
@@ -58,10 +58,10 @@ export default function Donate() {
                     <p id="donator_phone_error"></p>
                   </div>
 
-                  <div class="form-group">
-                    <div class="form-input">
-                      <div class="label-flex">
-                        <label for="blood-group" class="required">
+                  <div className="form-group">
+                    <div className="form-input">
+                      <div className="label-flex">
+                        <label for="blood-group" className="required">
                           Blood Group
                         </label>
                       </div>
@@ -81,9 +81,9 @@ export default function Donate() {
                     </div>
                     <p id="donator_blood_error"></p>
 
-                    <div class="form-input mt-2">
-                      <div class="label-flex ">
-                        <label for="payment" class="required">
+                    <div className="form-input mt-2">
+                      <div className="label-flex ">
+                        <label for="payment" className="required">
                           Gender
                         </label>
                       </div>
@@ -96,8 +96,8 @@ export default function Donate() {
                     </div>
                     <p id="donator_gender_error"></p>
 
-                    <div class="form-input mt-2">
-                      <label for="DOB" class="required">
+                    <div className="form-input mt-2">
+                      <label for="DOB" className="required">
                         DATE OF BIRTH
                       </label>
                       <input
@@ -114,21 +114,21 @@ export default function Donate() {
                     
                   <p id="donator_address_error"></p>
                 </div>
-                <div class="form-input d-flex flex-column justify-content-right ml-5 col-12">
-                    <label for="ADD" class="required address">
+                <div className="form-input d-flex flex-column justify-content-right ml-5 col-12">
+                    <label for="ADD" className="required address">
                       Address
                     </label>
                     <textarea
                       name="ADD"
                       id="Donator_address"
-                      class="col-11"
+                      className="col-11"
                       placeholder="Enter Address"
                     ></textarea>
                   </div>
                 
-                <div class="form-submit mt-3 ">
+                <div className="form-submit mt-3 ">
                   <input
-                    class="submit"
+                    className="submit"
                     id="submit_donate"
                     type="submit"
                     value="Submit"
