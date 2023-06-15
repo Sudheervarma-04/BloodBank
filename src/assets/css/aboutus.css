@@ -3,6 +3,7 @@
 *{
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
+	box-sizing: border-box;
 }
 #tooplate_middle { 
 

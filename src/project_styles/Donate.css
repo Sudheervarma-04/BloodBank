@@ -3,6 +3,7 @@
 *{
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
+  box-sizing: border-box;
 }
 /* @extend display-flex; */
 display-flex, .signup-content, .form-row, .label-flex, .form-radio-group {

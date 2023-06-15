@@ -32,13 +32,6 @@ export default function Home() {
         className="carousel slide animate_text post_carousel_wrapper swipe_x ps_easeOutCirc"
         data-ride="carousel"
       >
-        <ol className="carousel-indicators post_carousel_indicators">
-          <li
-            data-target="#post_carousel"
-            data-slide-to="0"
-            className="active"
-          ></li>
-        </ol>
 
         <div className="carousel-inner" role="listbox">
           <div className="carousel-item active">
@@ -93,6 +86,7 @@ export default function Home() {
                 className="rounded img-fluid d-block w-100 fit-cover"
                 style={{ height: 200 }}
                 src={img5}
+                alt="$"
               />
               <div className="py-4">
                 <center>
