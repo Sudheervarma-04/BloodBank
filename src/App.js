@@ -5,11 +5,13 @@ import About from "../src/Main/About"
 import Donate1 from "./Main/Donate"
 import Request from "./Main/Request";
 import Navbar from "./components/Navbar";
+import { ScrollToTop } from "./components/scrolltoTop";
 export default function App(){
   return (
     <div>
     <Router>
     <Navbar/>
+    <ScrollToTop/>
       <Routes>
         <Route exact path="/" index element={<Home />} />
         <Route path="/about" element={<About />} />
