@@ -3,7 +3,7 @@ import "../assets/css/aboutus.css"
 
 export default function About() {
   return (
-  <>
+  <div>
 
 <div class="row col-12" id="tooplate_middle">
  
@@ -126,6 +126,6 @@ export default function About() {
 </div>
 
 </div>
-  </>
+  </div>
   )
 }

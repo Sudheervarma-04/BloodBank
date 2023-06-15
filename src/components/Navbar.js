@@ -24,7 +24,7 @@ import "../assets/css/Pretty-Registration-Form-.css"
 import { Link } from 'react-router-dom'
 export default function Navbar() {
   return (
-        <>
+        <div>
              <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
         <div class="container-fluid">
           <img src={img1} alt="Logo" class="d-inline-block align-text-top"/>
@@ -42,6 +42,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-        </>
+        </div>
   )
 }
