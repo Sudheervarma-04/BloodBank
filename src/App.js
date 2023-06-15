@@ -7,6 +7,7 @@ import Request from "./Main/Request";
 import Navbar from "./components/Navbar";
 export default function App(){
   return (
+    <div>
     <Router>
     <Navbar/>
       <Routes>
@@ -16,6 +17,7 @@ export default function App(){
         <Route path="/request" element={<Request />} />
       </Routes>
     </Router>
+    </div>
   );
 }
 

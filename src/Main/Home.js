@@ -26,7 +26,7 @@ import "../assets/css/Pretty-Registration-Form-.css";
 import { Link } from "react-router-dom";
 export default function Home() {
   return (
-    <>
+    <div>
       <div
         id="post_carousel"
         class="carousel slide animate_text post_carousel_wrapper swipe_x ps_easeOutCirc"
@@ -207,6 +207,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </>
+    </div>
   );
 }

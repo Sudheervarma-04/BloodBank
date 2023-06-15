@@ -21,7 +21,7 @@ import "../assets/css/Projects-Grid-images.css"
 import "../assets/css/Pretty-Registration-Form-.css"
 export default function Request() {
   return (
-    <>        
+    <div>        
     <div class="main col-12" id="section-main">
         <div class="container mt-0">
             <div class="signup-content">
@@ -131,6 +131,6 @@ export default function Request() {
             </div>    
 </div>
 </div> 
-    </>
+    </div>
   )
 }

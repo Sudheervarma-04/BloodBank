@@ -2,7 +2,7 @@ import React from "react";
 import "../project_styles/Donate.css";
 export default function Donate() {
   return (
-    <>
+    <div>
     <div className="body">
       <div class="main" id="section-main">
         <div class="container mt-0">
@@ -140,6 +140,6 @@ export default function Donate() {
         </div>
       </div>
       </div>
-    </>
+    </div>
   );
 }
