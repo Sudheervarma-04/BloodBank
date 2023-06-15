@@ -35,6 +35,7 @@ input, select, textarea {
 
   textarea, .address{
     transform: translateX(30px) !important ;
+    border-radius: 5px;
   }
 
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {

@@ -27,14 +27,14 @@ export default function About() {
   <div class="col_fw col-12 d-flex justify-content-center pl-4">
       <div class="col_allw270 fp_service_box col-md-3 col-12">
           <h3>Donate</h3>
-          <img src="https://www.nicepng.com/png/full/34-345932_donate-blood-red-blood-drop-donate-blood-logo.png" class="img1" alt="Image Tick" />
+          <img src="https://www.nicepng.com/png/full/34-345932_donate-blood-red-blood-drop-donate-blood-logo.png" class="img1" alt="$" />
           <p style={{color: 'black'}}> TEARS OF A MOTHER CAN'T SAVE HER CHILD. BUT YOU CAN </p>
 
       </div>
 
       <div class="col_allw270 fp_service_box col-md-3 col-12">
           <h3>OUR SITE</h3>
-          <img src="https://www.nicepng.com/png/full/366-3668293_blood-donation-app-png-blood-donation-logo.png" class="img1"  alt="Post Image" />
+          <img src="https://www.nicepng.com/png/full/366-3668293_blood-donation-app-png-blood-donation-logo.png" class="img1"  alt="Post" />
           <p style={{color: 'black'}}>WE WILL CONNECT THE DONARS WITH YOU AT 0 COST</p>
 
       </div>

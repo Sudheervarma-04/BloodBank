@@ -61,6 +61,7 @@ export default function Home() {
                 class="rounded img-fluid d-block w-100 fit-cover"
                 style={{ height: 200 }}
                 src={img3}
+                alt="$"
               />
               <div class="py-4">
                 <center>
@@ -123,6 +124,7 @@ export default function Home() {
                 class="rounded img-fluid d-block w-100 fit-cover"
                 style={{ height: 200 }}
                 src={img4}
+                alt="$"
               />
               <div class="py-4">
                 <center>
@@ -165,39 +167,39 @@ export default function Home() {
           </div>
           <div class="col-sm-6 col-md-4 footer-contacts">
             <div>
-              <a href="https://goo.gl/maps/bFanvvmbxhrSjWVC7" target="_blank">
+              <Link href="https://goo.gl/maps/bFanvvmbxhrSjWVC7" target="_blank">
                 <span class="fa fa-map-marker footer-contacts-icon"> </span>
-              </a>
-              <a href="https://goo.gl/maps/bFanvvmbxhrSjWVC7" target="_blank">
+              </Link>
+              <Link href="https://goo.gl/maps/bFanvvmbxhrSjWVC7" target="_blank">
                 <p>
                   <span class="new-line-span">Gandhi Nagar,Rushikonda</span>
                   Visakhapatnam, Andhra Pradesh-530045
                 </p>
-              </a>
+              </Link>
             </div>
             <div>
               <i class="fa fa-phone footer-contacts-icon"></i>
               <p class="footer-center-info email text-start">
-                <a href="#" style={{ color: "#ffffff" }}>
+                <Link href="#" style={{ color: "#ffffff" }}>
                   +91 98850 96787
-                </a>
+                </Link>
               </p>
             </div>
             <div>
               <i class="fa fa-envelope footer-contacts-icon"></i>
               <p>
                 {" "}
-                <a style={{ color: "rgb(255, 255, 255)" }}>
+                <Link style={{ color: "rgb(255, 255, 255)" }}>
                   gitambloodbank@gmail.com
-                </a>
+                </Link>
               </p>
             </div>
           </div>
           <div class="col-md-4 footer-about">
             <h4>
-              <a href="./aboutus.html" style={{ color: "#ffffff" }}>
+              <Link href="./aboutus.html" style={{ color: "#ffffff" }}>
                 About
-              </a>
+              </Link>
             </h4>
             <p>
               This Blood Bank is an initiative by a group of GITAM B.Tech CSE

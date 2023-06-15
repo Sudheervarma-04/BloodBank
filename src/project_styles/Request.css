@@ -110,6 +110,7 @@ h2 {
   clear: both; }
   textarea, .address{
     transform: translateX(30px) !important ;
+    border-radius: 5px;
   }
 
 body {
