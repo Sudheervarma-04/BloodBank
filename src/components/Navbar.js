@@ -25,19 +25,19 @@ import { Link } from 'react-router-dom'
 export default function Navbar() {
   return (
         <div>
-             <nav class="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
-        <div class="container-fluid">
-          <img src={img1} alt="Logo" class="d-inline-block align-text-top"/>
+             <nav className="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+        <div className="container-fluid">
+          <img src={img1} alt="Logo" className="d-inline-block align-text-top"/>
          
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <Link class="nav-link active" to="/">Home</Link>
-              <Link class="nav-link active" to="/about">About</Link>
-              <Link class="nav-link active" to="/donate">Donate</Link>
-              <Link class="nav-link active" to="/request">Request</Link>
+          <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+            <div className="navbar-nav">
+              <Link className="nav-link active" to="/">Home</Link>
+              <Link className="nav-link active" to="/about">About</Link>
+              <Link className="nav-link active" to="/donate">Donate</Link>
+              <Link className="nav-link active" to="/request">Request</Link>
             </div>
           </div>
         </div>
