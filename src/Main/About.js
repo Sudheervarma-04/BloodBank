@@ -94,6 +94,13 @@ export default function About() {
     <b>  S Harsha Kumar </b><br/>Team Member
   </div>
   </div>
+  <div className="col-12 col-md-3">
+  <div className="box box-6 col-12 col-md-12">
+  </div>
+  <div className="col-12 col-md-12 pt-3" >
+    <b>  K Aditya </b><br/>Team Member
+  </div>
+  </div>
 </div>
 </div>
 

@@ -21,13 +21,13 @@ import "../assets/css/Projects-Grid-images.css"
 import "../assets/css/Pretty-Registration-Form-.css"
 export default function Request() {
   return (
-    <div>        
+    <div className='reqbody'>        
     <div className="main col-12" id="section-main">
         <div className="container mt-0">
             <div className="signup-content">
                 <div className="signup-img pt-1"> 
               </div>
-                <div className="signup-form">
+                <div className="signup-form pt-5">
                     <h1 className="heading">REQUEST</h1>
                     <form method="POST" className="register-form" id="register-form">
                         <div className="form-row">
