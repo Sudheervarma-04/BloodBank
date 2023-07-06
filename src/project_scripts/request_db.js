@@ -277,10 +277,11 @@ async function add_to_request() {
         await searchdonor(request_data.patient_blood);
         alert("We have registered your request. Redirecting to Home.");
 
-        setTimeout(myURL, 100);
-        function myURL() {
-          location.href = "Homepage.html";
-        }
+        setTimeout(100);
+        // setTimeout(myURL, 100);
+        // function myURL() {
+        //   location.href = "Homepage.html";
+        // }
       })
       .catch((error) => {
         console.log(error);

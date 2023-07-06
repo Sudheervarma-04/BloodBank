@@ -14,7 +14,7 @@ async function sendemail_request_donors(email) {
   //     {
   //       name: "File_Name_with_Extension",
   //       path: "Full Path of the file"
-  //     }]
+//   }]
   })
     .then(function (message) {
       // alert("Mail has been sent successfully");

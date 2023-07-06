@@ -1,5 +1,7 @@
 import React from "react";
 import "../project_styles/Donate.css";
+import "../project_scripts/db_transactions";
+
 export default function Donate() {
   return (
     <>
@@ -127,7 +129,7 @@ export default function Donate() {
                   </div>
                 
                 <div className="form-submit mt-3 ">
-                  <input
+                  <input 
                     className="submit"
                     id="submit_donate"
                     type="submit"

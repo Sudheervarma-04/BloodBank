@@ -12,6 +12,7 @@ import {
   Timestamp,
 } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
 import { sendemail_donation } from "./send_mail.js";
+import Home from "../Main/Home.js"
 const firebaseConfig = {
   apiKey: "AIzaSyC-ib62fjrfWgq7jis-8EngXAfRnEaV2t4",
   authDomain: "blood-bank-3f5d5.firebaseapp.com",
@@ -38,11 +39,11 @@ function get_value_gender() {
     return "Others";
   }
 }
-function get_donation() {
+export function get_donation() {
   console.log("getting");
   // const donator_name_field = document.getElementById("Donator_name");
   const donator_name = document.getElementById("Donator_name").value;
-  if (donator_name.length == 0) {
+  if (donator_name.length === 0) {
     document.getElementById("donator_name_error").innerHTML =
       "Kindly fill the name.";
     document.getElementById("donator_name_error").style.color = "red";
@@ -94,7 +95,7 @@ function get_donation() {
     document.getElementById("donator_email_error").innerHTML = "";
   }
   const donator_phone = document.getElementById("Donator_phone").value;
-  if (donator_phone.length != 10) {
+  if (donator_phone.length !== 10) {
     document.getElementById("donator_phone_error").innerHTML =
       "Enter a valid phone number.";
     document.getElementById("donator_phone_error").style.color = "red";
@@ -136,7 +137,7 @@ function get_donation() {
     document.getElementById("donator_gender_error").innerHTML = "";
   }
   const donator_dob = new Date(document.getElementById("Donator_dob").value);
-  if (donator_dob == "Invalid Date") {
+  if (donator_dob === "Invalid Date") {
     document.getElementById("donator_dob_error").innerHTML = "Invalid DOB.";
     document.getElementById("donator_dob_error").style.color = "red";
     return false;
@@ -145,7 +146,7 @@ function get_donation() {
   }
 
   const donator_address = document.getElementById("Donator_address").value;
-  if (donator_address.length == 0) {
+  if (donator_address.length === 0) {
     document.getElementById("donator_address_error").innerHTML =
       "Kindly fill the address.";
     document.getElementById("donator_address_error").style.color = "red";
@@ -254,10 +255,10 @@ async function add_to_donation() {
         await sendemail_donation(donation_data.donator_email);
         window.location = "#sec-2";
         document.getElementById("sec-2").style.display = "block";
-        setTimeout(myURL, 7000);
-        function myURL() {
-          location.href = "Homepage.html";
-        }
+        setTimeout(7000);
+        // setTimeout(myURL, 7000);
+        // function myURL() {window.location.href = `${<Home/>}`;
+        // }
       })
       .catch((error) => {
         console.log(error);
