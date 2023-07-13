@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Bg from "../assets/img/Background_form.png";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -6,6 +6,20 @@ import Form from 'react-bootstrap/Form';
 import '../project_styles/donatepage.css';
 import Button from 'react-bootstrap/Button';
 export default function RequestNew() {
+  const [Fullname, setFullname] = useState("");
+  const [email, setemail] = useState("");
+
+  const handleName = (event) => {
+    const result = event.target.value.replace(/[^a-z]/gi, "");
+
+    setFullname(result);
+  };
+
+  const handleEmail = (event) => {
+    const result = event.target.value.replace(/[^a-z]/gi, "");
+
+    setemail(result);
+  };
   return (
     <>
     <div className=' bg-black '>
@@ -22,6 +36,8 @@ export default function RequestNew() {
         type="text"
         id="firstname"
         placeholder='Enter your name'
+        value = {Fullname}
+        onChange = {handleName}
         className='pb-2'
       />
       </Col>
@@ -50,6 +66,8 @@ export default function RequestNew() {
         type="email"
         id="firstname"
         placeholder='Enter Email'
+        value = {email}
+        onChange={handleEmail}
         className='pb-2'
       />
         </Col>
