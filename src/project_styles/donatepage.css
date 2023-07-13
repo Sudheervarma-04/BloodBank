@@ -1,0 +1,16 @@
+.class1
+{
+    width: 1015px;
+    padding: 7rem;
+    margin-left: 30rem;
+}
+.imageclass
+{
+    position: absolute;
+  top: 55%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+
+
+}
