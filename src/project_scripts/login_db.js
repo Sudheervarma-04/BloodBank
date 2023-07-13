@@ -1,15 +1,9 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+import { initializeApp } from "firebase/app";
 import {
   getFirestore,
-  doc,
-  setDoc,
-  getDoc,
   getDocs,
-  query,
-  where,
   collection,
-  Timestamp,
-} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+} from "firebase/firestore/lite";
 const firebaseConfig = {
   apiKey: "AIzaSyC-ib62fjrfWgq7jis-8EngXAfRnEaV2t4",
   authDomain: "blood-bank-3f5d5.firebaseapp.com",

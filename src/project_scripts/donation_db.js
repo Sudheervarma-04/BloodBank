@@ -1,18 +1,11 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+import { initializeApp } from "firebase/app";
 import {
   getFirestore,
   doc,
   setDoc,
-  getDoc,
-  getDocs,
-  query,
-  where,
-  addDoc,
   collection,
-  Timestamp,
-} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+} from "firebase/firestore/lite";
 import { sendemail_donation } from "./send_mail.js";
-import Home from "../Main/Home.js"
 const firebaseConfig = {
   apiKey: "AIzaSyC-ib62fjrfWgq7jis-8EngXAfRnEaV2t4",
   authDomain: "blood-bank-3f5d5.firebaseapp.com",
@@ -24,25 +17,25 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 const db = getFirestore();
 
-function get_value_gender() {
-  console.log(123);
-  if (document.getElementById("dot-1").value) {
-    console.log(234);
-    return "Male";
-  }
-  if (document.getElementById("dot-2").value) {
-    console.log(345);
-    return "Female";
-  }
-  if (document.getElementById("dot-3").value) {
-    console.log(456);
-    return "Others";
-  }
-}
+// function get_value_gender() {
+//   console.log(123);
+//   if (document.getElementById("dot-1").value) {
+//     console.log(234);
+//     return "Male";
+//   }
+//   if (document.getElementById("dot-2").value) {
+//     console.log(345);
+//     return "Female";
+//   }
+//   if (document.getElementById("dot-3").value) {
+//     console.log(456);
+//     return "Others";
+//   }
+// }
 export function get_donation() {
   console.log("getting");
   // const donator_name_field = document.getElementById("Donator_name");
-  const donator_name = document.getElementById("Donator_name").value;
+  const donator_name = document.getElementById("Donatorname").value;
   if (donator_name.length === 0) {
     document.getElementById("donator_name_error").innerHTML =
       "Kindly fill the name.";
@@ -194,7 +187,7 @@ async function check_age(dob) {
 async function add_to_donation() {
   console.log("called");
   const donation_data = JSON.parse(get_donation());
-  let flag = 0;
+  // let flag = 0;
   console.log(donation_data[3]);
   console.log(donation_data);
   if (!donation_data) {
