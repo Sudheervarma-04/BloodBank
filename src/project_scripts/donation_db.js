@@ -246,7 +246,7 @@ async function add_to_donation() {
         console.log("Document has been added successfully");
         alert("Thank You for the Donation.")
         // await sendemail_donation(donation_data.donator_email);
-        setTimeout(myURL, 7000);
+        setTimeout(myURL, 3000);
         function myURL() {
           window.location.href = "#";
         }

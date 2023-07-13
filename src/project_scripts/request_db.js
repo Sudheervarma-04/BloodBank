@@ -273,9 +273,7 @@ async function add_to_request() {
         // await sendemail_request(request_data.patient_email);
         await searchdonor(request_data.patient_blood);
         alert("We have registered your request. Redirecting to Home.");
-
-        setTimeout(100);
-        setTimeout(myURL, 100);
+        setTimeout(myURL, 3000);
         function myURL() {
           window.location.href = "#";
         }
