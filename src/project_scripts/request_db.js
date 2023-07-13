@@ -1,4 +1,4 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+import { initializeApp } from "firebase/app";
 import {
   getFirestore,
   doc,
@@ -7,11 +7,8 @@ import {
   getDoc,
   getDocs,
   query,
-  where,
-  addDoc,
   collection,
-  Timestamp,
-} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+} from "firebase/firestore/lite";
 import { sendemail_request, sendemail_request_donors } from "./send_mail.js";
 // const firebaseConfig = {
 //   apiKey: "AIzaSyAJ1mrcBYnl_M2bG7vfpSwlcm5NnpzsohQ",
@@ -37,7 +34,7 @@ const db = getFirestore();
 function get_request() {
   console.log("getting");
   const patient_name = document.getElementById("Patient_name").value;
-  if (patient_name.length == 0) {
+  if (patient_name.length === 0) {
     document.getElementById("patient_name_error").innerHTML =
       "Kindly fill the name.";
     document.getElementById("patient_name_error").style.color = "red";
@@ -46,12 +43,12 @@ function get_request() {
     document.getElementById("patient_name_error").innerHTML = "";
   }
   const patient_age = document.getElementById("patient_dob").value;
-  if (patient_age.length == 0) {
+  if (patient_age.length === 0) {
     document.getElementById("patient_dob_error").innerHTML =
       "Kindly enter age.";
     document.getElementById("patient_dob_error").style.color = "red";
     return false;
-  } else if (patient_age == 0 || patient_age > 100 || patient_age < 0) {
+  } else if (patient_age === 0 || patient_age > 100 || patient_age < 0) {
     document.getElementById("patient_dob_error").innerHTML =
       "Kindly enter valid age.";
     document.getElementById("patient_dob_error").style.color = "red";
@@ -75,7 +72,7 @@ function get_request() {
     document.getElementById("patient_email_error").innerHTML = "";
   }
   const patient_phone = document.getElementById("patient_phone").value;
-  if (patient_phone.length != 10) {
+  if (patient_phone.length !== 10) {
     document.getElementById("patient_phone_error").innerHTML =
       "Enter a valid phone number.";
     document.getElementById("patient_phone_error").style.color = "red";
@@ -101,7 +98,7 @@ function get_request() {
   console.log(diffTime);
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
   console.log(diffDays);
-  if (patient_required_date == "Invalid Date") {
+  if (patient_required_date === "Invalid Date") {
     document.getElementById("patient_required_error").innerHTML =
       "Kindly fill the required date.";
     document.getElementById("patient_required_error").style.color = "red";
@@ -123,7 +120,7 @@ function get_request() {
   } else {
     document.getElementById("patient_units_error").innerHTML = "";
   }
-  if (no_of_units.length == 0) {
+  if (no_of_units.length === 0) {
     document.getElementById("patient_units_error").innerHTML =
       "Enter required number of units of blood.";
     document.getElementById("patient_units_error").style.color = "red";
@@ -150,7 +147,7 @@ function get_request() {
   }
 
   const purpose_request = document.getElementById("purpose_request").value;
-  if (purpose_request.length == 0) {
+  if (purpose_request.length === 0) {
     document.getElementById("patient_purpose_error").innerHTML =
       "Kindly provide purpose.";
     document.getElementById("patient_purpose_error").style.color = "red";
@@ -211,7 +208,7 @@ async function add_to_request() {
   console.log("called");
   const request_data = JSON.parse(get_request());
   console.log(request_data);
-  let flag = 0;
+  // let flag = 0;
   if (!request_data) {
     return false;
   }
@@ -292,7 +289,7 @@ async function add_to_request() {
   }
 }
 async function searchdonor(blood_group) {
-  var docs = new Array();
+  var docs = new Array([]);
   const donation = query(collectionGroup(db, blood_group + "_donate"));
   console.log("searching");
   // const querySnapshot = await getDocs(collection(db, view_type));

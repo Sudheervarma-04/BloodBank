@@ -1,16 +1,11 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+import { initializeApp } from "firebase/app";
 import {
   getFirestore,
-  doc,
-  setDoc,
-  getDoc,
   getDocs,
   query,
-  where,
   collectionGroup,
   collection,
-  Timestamp,
-} from "https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js";
+} from "firebase/firestore/lite";
 // import { sendEmail_password, sendEmail_username } from "./send_mail.js";
 const firebaseConfig = {
   apiKey: "AIzaSyC-ib62fjrfWgq7jis-8EngXAfRnEaV2t4",
@@ -70,8 +65,8 @@ async function change_donate_html(blood_group) {
 }
 
 async function view_blood_donate(blood_group) {
-  var docs = new Array();
-  if (blood_group == "all") {
+  var docs = new Array([]);
+  if (blood_group === "all") {
     const donation_A_minus = query(collectionGroup(db, "A-_donate"));
     console.log("viewing");
     // const querySnapshot = await getDocs(collection(db, view_type));
@@ -210,8 +205,8 @@ async function change_request_html(blood_group) {
 }
 
 async function view_blood_request(blood_group) {
-  var docs = new Array();
-  if (blood_group == "all") {
+var docs = new Array([]);
+  if (blood_group === "all") {
     const request_A_minus = query(collectionGroup(db, "A-_request"));
     console.log("viewing");
     // const querySnapshot = await getDocs(collection(db, view_type));

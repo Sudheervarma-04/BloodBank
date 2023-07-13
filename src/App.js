@@ -2,8 +2,6 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import ReactDOM from "react-dom/client";
 import Home from "../src/Main/Home";
 import About from "../src/Main/About";
-import DonatePage from "./Main/Donate";
-import RequestPage from "./Main/Request";
 import Navbar from "./components/Navbar";
 import { ScrollToTop } from "./components/scrolltoTop";
 import { useEffect } from "react";
