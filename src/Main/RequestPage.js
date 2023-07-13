@@ -17,17 +17,18 @@ export default function RequestNew() {
         <br/>
         <Row>
         <Col>
-    <Form.Label style={{color: "white"}}>First Name</Form.Label>
+    <Form.Label style={{color: "white"}}>Full Name</Form.Label>
       <Form.Control
-        type="text"
-        id="firstname"
+        type='text'
+        id='Patient_name'
         placeholder='Enter your name'
         className='pb-2'
       />
+      <p id="patient_name_error"></p>
       </Col>
       <Col>
       <Form.Label style={{color: "white"}}>Blood Group</Form.Label>
-      <Form.Select aria-label="BloodGroup">
+      <Form.Select id='PBlood_group_request' aria-label="BloodGroup">
       <option>Select Blood Group</option>
       <option value="1">A+</option>
       <option value="2">A-</option>
@@ -38,8 +39,8 @@ export default function RequestNew() {
       <option value="3">AB+</option>
       <option value="3">AB-</option>
       <option value="3">Other</option>
-
     </Form.Select>
+    <p id="patient_blood_error"></p>
       </Col>
       </Row>
       <br/>
@@ -48,19 +49,21 @@ export default function RequestNew() {
         <Form.Label style={{color: "white"}}>Email</Form.Label>
       <Form.Control
         type="email"
-        id="firstname"
+        id='patient_email'
         placeholder='Enter Email'
         className='pb-2'
       />
+      <p id="patient_email_error"></p>
         </Col>
         <Col>
         <Form.Label style={{color: "white"}}>Phone number</Form.Label>
       <Form.Control
         type="number"
-        id="phonenumber"
+        id='patient_phone'
         placeholder='Enter Phone Number'
         className='pb-2'
       />
+      <p id="patient_phone_error"></p>
     
         </Col>
       </Row>
@@ -68,21 +71,23 @@ export default function RequestNew() {
       <Row>
         <Col>
         <Form.Label style={{color: "white"}}>Gender</Form.Label>
-      <Form.Select aria-label="Gender">
+      <Form.Select id='PGender' aria-label="Gender">
       <option>Select Gender</option>
       <option value="1">Male</option>
       <option value="2">Female</option>
       <option value="3">Other</option>
       </Form.Select>
+      <p id="patient_gender_error"></p>
         </Col>
         <Col>
         <Form.Label style={{color: "white"}}>Required Date</Form.Label>
       <Form.Control
         type="date"
-        id="dob"
-        placeholder='Enter Date of Birth'
+        id='required_date'
+        placeholder='Enter Required date'
         className='pb-2'
       />
+      <p id="patient_required_error"></p>
         </Col>
       </Row>
       <br/>
@@ -91,30 +96,32 @@ export default function RequestNew() {
         <Form.Label style={{color: "white"}}>AGE</Form.Label>
       <Form.Control
         type="email"
-        id="firstname"
-        placeholder='Enter Email'
+        id='patient_dob'
+        placeholder='Enter Age'
         className='pb-2'
       />
+      <p id="patient_dob_error"></p>
         </Col>
         <Col>
         <Form.Label style={{color: "white"}}>No of Units required</Form.Label>
       <Form.Control
         type="number"
-        id="phonenumber"
-        placeholder='Enter Phone Number'
+        id='no_of_units'
+        placeholder='Enter no of units required'
         className='pb-2'
       />
-    
+      <p id="patient_units_error"></p>
         </Col>
       </Row>
       <br/>
       <Row>
       <Form.Label style={{color: "white"}}>Purpose</Form.Label>
-    <Form.Control as="textarea" rows={3} />
+    <Form.Control as="textarea" id='purpose_request' rows={2} />
+    <p id="patient_purpose_error"></p>
     </Row>
     <div>
     <center>
-    <Button type="submit" className='col-7 mt-5'>Submit form</Button>
+    <Button type="submit" id='submit_request' className='col-7 mt-5'>Submit form</Button>
     </center>
     </div>
     </div>
