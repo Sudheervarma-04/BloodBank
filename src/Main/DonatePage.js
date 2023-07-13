@@ -21,7 +21,7 @@ export default function DonateNew() {
       <Form.Control
         type="text"
         id="firstname"
-        placeholder='Enter your first name'
+        placeholder='Enter your name'
         className='pb-2'
       />
       </Col>
