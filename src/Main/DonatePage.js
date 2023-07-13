@@ -1,25 +1,27 @@
-import React, { useState } from "react";
+import React from "react";
 import Bg from "../assets/img/Background_form.png";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Form from "react-bootstrap/Form";
 import "../project_styles/donatepage.css";
 import Button from "react-bootstrap/Button";
+// import { db_transactions } from "../project_scripts/db_transactions";
+import { add_to_donation } from "../project_scripts/donation_db";
 export default function DonateNew() {
-  const [Fullname, setFullname] = useState("");
-  const [email, setemail] = useState("");
+  // const [Fullname, setFullname] = useState("");
+  // const [email, setemail] = useState("");
 
-  const handleName = (event) => {
-    const result = event.target.value.replace(/[^a-z]/gi, "");
+  // const handleName = (event) => {
+  //   const result = event.target.value.replace(/[^a-z]/gi, "");
 
-    setFullname(result);
-  };
+  //   setFullname(result);
+  // };
 
-  const handleEmail = (event) => {
-    const result = event.target.value.replace(/[^a-z]/gi, "");
+  // const handleEmail = (event) => {
+  //   const result = event.target.value.replace(/[^a-z]/gi, "");
 
-    setemail(result);
-  };
+  //   setemail(result);
+  // };
 
   return (
     <>
@@ -38,8 +40,8 @@ export default function DonateNew() {
                 id="Donatorname"
                 placeholder="Enter your name"
                 className="pb-2"
-                value={Fullname}
-                onChange={handleName}
+                // value={Fullname}
+                // onChange={handleName}
               />
               <p id="donator_name_error"></p>
             </Col>
@@ -47,15 +49,14 @@ export default function DonateNew() {
               <Form.Label style={{ color: "white" }}>Blood Group</Form.Label>
               <Form.Select aria-label="BloodGroup" id="Blood_group">
                 <option>Select Blood Group</option>
-                <option value="1">A+</option>
-                <option value="2">A-</option>
-                <option value="3">B+</option>
-                <option value="3">B-</option>
-                <option value="3">O+</option>
-                <option value="3">O-</option>
-                <option value="3">AB+</option>
-                <option value="3">AB-</option>
-                <option value="3">Other</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
               </Form.Select>
               <p id="donator_blood_error"></p>
             </Col>
@@ -69,8 +70,8 @@ export default function DonateNew() {
                 id="Donator_email"
                 placeholder="Enter Email"
                 className="pb-2"
-                value={email}
-                onChange={handleEmail}
+                // value={email}
+                // onChange={handleEmail}
               />
               <p id="donator_email_error"></p>
             </Col>
@@ -78,9 +79,9 @@ export default function DonateNew() {
               <Form.Label style={{ color: "white" }}>Gender</Form.Label>
               <Form.Select aria-label="Gender" id="Gender">
                 <option>Select Gender</option>
-                <option value="1">Male</option>
-                <option value="2">Female</option>
-                <option value="3">Other</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
               </Form.Select>
               <p id="donator_gender_error"></p>
             </Col>
@@ -112,10 +113,17 @@ export default function DonateNew() {
           <Row>
             <Form.Label style={{ color: "white" }}>Address</Form.Label>
             <Form.Control as="textarea" rows={3} id="Donator_address" />
+
+            <p id="donator_address_error"></p>
           </Row>
           <div>
             <center>
-              <Button type="submit" className="col-7 mt-5">
+              <Button
+                type="submit"
+                className="col-7 mt-5"
+                id="submit_donate"
+                onClick={add_to_donation}
+              >
                 Submit form
               </Button>
             </center>

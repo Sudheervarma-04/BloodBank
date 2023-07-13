@@ -9,7 +9,7 @@ import {
   query,
   collection,
 } from "firebase/firestore/lite";
-import { sendemail_request, sendemail_request_donors } from "./send_mail.js";
+// import { sendemail_request, sendemail_request_donors } from "./send_mail.js";
 // const firebaseConfig = {
 //   apiKey: "AIzaSyAJ1mrcBYnl_M2bG7vfpSwlcm5NnpzsohQ",
 //   authDomain: "blood-bank-25293.firebaseapp.com",
@@ -270,15 +270,15 @@ async function add_to_request() {
     })
       .then(async (docRef) => {
         console.log("Document has been added successfully");
-        await sendemail_request(request_data.patient_email);
+        // await sendemail_request(request_data.patient_email);
         await searchdonor(request_data.patient_blood);
         alert("We have registered your request. Redirecting to Home.");
 
         setTimeout(100);
-        // setTimeout(myURL, 100);
-        // function myURL() {
-        //   location.href = "Homepage.html";
-        // }
+        setTimeout(myURL, 100);
+        function myURL() {
+          window.location.href = "#";
+        }
       })
       .catch((error) => {
         console.log(error);
@@ -303,7 +303,7 @@ async function searchdonor(blood_group) {
     const time = Math.abs(dateTwo - dateOne);
     const days = Math.ceil(time / (1000 * 60 * 60 * 24));
     if (days > 90) {
-      await sendemail_request_donors(doc.data().Email);
+      // await sendemail_request_donors(doc.data().Email);
     }
     // console.log(doc.id, " => ", doc.data());
   });

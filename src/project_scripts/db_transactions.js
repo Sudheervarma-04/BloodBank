@@ -20,7 +20,7 @@ import { add_to_request } from "./request_db.js";
 //   });
 // }
 
-export const db_transactions = () => {
+export function db_transactions() {
   const click_register_button = document.getElementById("check_register");
   if (click_register_button) {
     click_register_button.addEventListener("click", function () {

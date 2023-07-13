@@ -1,11 +1,6 @@
 import { initializeApp } from "firebase/app";
-import {
-  getFirestore,
-  doc,
-  setDoc,
-  collection,
-} from "firebase/firestore/lite";
-import { sendemail_donation } from "./send_mail.js";
+import { getFirestore, doc, setDoc, collection } from "firebase/firestore/lite";
+// import { sendemail_donation } from "./send_mail.js";
 const firebaseConfig = {
   apiKey: "AIzaSyC-ib62fjrfWgq7jis-8EngXAfRnEaV2t4",
   authDomain: "blood-bank-3f5d5.firebaseapp.com",
@@ -106,7 +101,7 @@ export function get_donation() {
     document.getElementById("donator_phone_error").style.color = "red";
     return false;
   } else {
-    console.log(donator_phone[1]);
+    console.log(donator_phone);
     document.getElementById("donator_phone_error").innerHTML = "";
   }
   const donator_blood = document.getElementById("Blood_group").value;
@@ -228,7 +223,11 @@ async function add_to_donation() {
     console.log("adding");
     await setDoc(
       doc(
-        collection(dbRef,`${time.getDate()}-${time.getMonth()+1}-${time.getFullYear()}`, donation_data.donator_blood + "_donate"),
+        collection(
+          dbRef,
+          `${time.getDate()}-${time.getMonth() + 1}-${time.getFullYear()}`,
+          donation_data.donator_blood + "_donate"
+        ),
         donation_data.donator_name
       ),
       {
@@ -245,13 +244,12 @@ async function add_to_donation() {
     )
       .then(async (docRef) => {
         console.log("Document has been added successfully");
-        await sendemail_donation(donation_data.donator_email);
-        window.location = "#sec-2";
-        document.getElementById("sec-2").style.display = "block";
-        setTimeout(7000);
-        // setTimeout(myURL, 7000);
-        // function myURL() {window.location.href = `${<Home/>}`;
-        // }
+        alert("Thank You for the Donation.")
+        // await sendemail_donation(donation_data.donator_email);
+        setTimeout(myURL, 7000);
+        function myURL() {
+          window.location.href = "#";
+        }
       })
       .catch((error) => {
         console.log(error);

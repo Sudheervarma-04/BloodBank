@@ -1,5 +1,5 @@
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
-import ReactDOM from "react-dom/client";
+// import ReactDOM from "react-dom/client";
 import Home from "../src/Main/Home";
 import About from "../src/Main/About";
 import Navbar from "./components/Navbar";
@@ -8,16 +8,21 @@ import { useEffect } from "react";
 import { db_transactions } from "./project_scripts/db_transactions";
 import DonateNew from "./Main/DonatePage";
 import RequestNew from "./Main/RequestPage";
+// import { donation_js } from "./project_scripts/donation_db";
 export default function App() {
   useEffect(() => {
     const head = document.querySelector("head");
 
-    const script = document.createElement("script");
-    script.innerHTML = db_transactions;
-    head.appendChild(script);
+    const script1 = document.createElement("script");
+    script1.innerHTML = db_transactions;
+    head.appendChild(script1);
+    // const script2 = document.createElement("script");
+    // script2.innerHTML = donation_js;
+    // head.appendChild(script2);
 
     return () => {
-      head.removeChild(script);
+      head.removeChild(script1);
+      // head.removeChild(script2);
     };
     // script.setAttribute("type", "module");
   }, []);
@@ -36,6 +41,3 @@ export default function App() {
     </div>
   );
 }
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
