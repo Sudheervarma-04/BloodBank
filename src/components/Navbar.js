@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import "./Navbar.css"
 import img1 from "../assets/img/bloodbank logo.png"
 // import { Link } from "react-router-dom";
 import "../assets/css/styles.css"
@@ -23,21 +24,26 @@ import "../assets/css/Projects-Grid-images.css"
 import "../assets/css/Pretty-Registration-Form-.css"
 import { Link } from 'react-router-dom'
 export default function Navbar() {
+  const [toggle , setToggle] = useState(false);
+
+  function ToggleAction(){
+    setToggle(!toggle);
+  }
   return (
         <div>
              <nav className="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
         <div className="container-fluid">
-          <img src={img1} alt="Logo" className="d-inline-block align-text-top"/>
+          <img src={img1} alt="Logo" className="d-inline-block align-text-top nav-logo-custom"/>
          
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <button onClick={ToggleAction} className="navbar-toggler" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-            <div className="navbar-nav">
-              <Link className="nav-link active" to="/">Home</Link>
-              <Link className="nav-link active" to="/about">About</Link>
-              <Link className="nav-link active" to="/donate">Donate</Link>
-              <Link className="nav-link active" to="/request">Request</Link>
+          <div className={toggle? "collpase navbar-collapse justify-content-end custom-nav-div":"collapse navbar-collapse justify-content-end custom-nav-hide"} id="collapsibleNavbar">
+            <div className="navbar-nav nav-links-custom">
+              <Link onClick={ToggleAction} className="nav-link active" to="/">Home</Link>
+              <Link onClick={ToggleAction} className="nav-link active" to="/about">About</Link>
+              <Link onClick={ToggleAction} className="nav-link active" to="/donate">Donate</Link>
+              <Link onClick={ToggleAction} className="nav-link active" to="/request">Request</Link>
             </div>
           </div>
         </div>
