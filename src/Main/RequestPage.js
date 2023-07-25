@@ -4,7 +4,6 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import '../project_styles/donatepage.css';
 import Button from 'react-bootstrap/Button';
-import { add_to_request } from '../project_scripts/request_db';
 export default function RequestNew() {
   return (
     <>

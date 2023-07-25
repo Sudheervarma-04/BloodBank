@@ -98,6 +98,13 @@ export default function About() {
 
 </div>
 <div className="row d-flex justify-content-center mt-5 p-3">
+<div className="col-12 col-md-3">
+  <div className="box box-6 col-12 col-md-12">
+  </div>
+  <div className="col-12 col-md-12 pt-3" >
+    <b>  Akash Kodali </b><br/>Team Member
+  </div>
+  </div>
   <div className="col-12 col-md-3">
     <div className="box box-4 col-12 col-md-12">
     </div>
