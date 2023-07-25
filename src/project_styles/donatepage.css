@@ -1,16 +1,31 @@
 .class1
 {
-    width: 1015px;
     padding: 7rem;
     margin-left: 30rem;
 }
-.imageclass
+
+.image{
+  background-image: url('../assets/img/Background_form.png') !important;
+  background-repeat: no-repeat;
+
+}
+
+@media only screen and (max-width: 1000px) {
+  .image
+  {
+    background-image: none !important;
+  }
+  .class1
+  {
+    transform: translate(-50%,0%);
+  }
+}
+@media screen  and (min-width: 0px) and (max-width: 800px)
 {
-    position: absolute;
-  top: 55%;
-  left: 14%;
-  transform: translate(-50%, -50%);
-  background-size: cover;
 
-
+    .class1
+    {
+        padding: 7rem;
+        margin-left: 50vw;
+    }
 }
