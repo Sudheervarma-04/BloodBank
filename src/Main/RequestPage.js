@@ -4,6 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import '../project_styles/donatepage.css';
 import Button from 'react-bootstrap/Button';
+import { get_request } from '../project_scripts/request_db';
 export default function RequestNew() {
   return (
     <>
@@ -117,7 +118,7 @@ export default function RequestNew() {
     </Row>
     <div>
     <center>
-    <Button type="submit" className='col-7 mt-5' id='submit_request'  onClick={add_to_request}>Submit form</Button>
+    <Button type="submit" className='col-7 mt-5' id='submit_request'  onClick={get_request()}>Submit form</Button>
     </center>
     </div>
     </div>

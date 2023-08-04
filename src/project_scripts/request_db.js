@@ -31,7 +31,7 @@ const firebaseConfig = {
 initializeApp(firebaseConfig);
 const db = getFirestore();
 
-function get_request() {
+export function get_request() {
   console.log("getting");
   const patient_name = document.getElementById("Patient_name").value;
   if (patient_name.length === 0) {
