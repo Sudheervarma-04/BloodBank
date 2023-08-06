@@ -4,7 +4,7 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import '../project_styles/donatepage.css';
 import Button from 'react-bootstrap/Button';
-import { get_donation } from '../project_scripts/donation_db';
+import { add_to_donation,} from '../project_scripts/donation_db';
 
 export default function DonateNew() {
   return (
@@ -24,6 +24,7 @@ export default function DonateNew() {
         placeholder='Enter your first name'
         className='pb-2'
       />
+      <p id="donator_name_error"></p>
       </Col>
       <Col className='col-md-6 col-12'>
       <Form.Label style={{color: "white"}}>Blood Group</Form.Label>
@@ -97,7 +98,7 @@ export default function DonateNew() {
     </Row>
     <div>
     <center>
-    <Button type="submit" className='col-7 mt-5' onClick={get_donation()}>Submit form</Button>
+    <Button type="submit" className='col-7 mt-5' onClick = {add_to_donation}>Submit form</Button>
     </center>
     </div>
     </div>
