@@ -9,7 +9,7 @@ export default function RequestNew() {
   return (
     <>
     <div className='bg-black'>
-      <div className='row col-12 image'>
+      <div className='row col-12 mt-5 image'>
     <div className='class1 col-md-7 col-12 p-5'>
         <h1 style={{color: "white", fontSize: 50}} className='pt-5'>Request</h1>
         <br/>

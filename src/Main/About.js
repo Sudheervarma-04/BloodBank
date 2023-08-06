@@ -102,7 +102,7 @@ export default function About() {
   <div className="box box-6 col-12 col-md-12">
   </div>
   <div className="col-12 col-md-12 pt-3" >
-    <b>  Akash Kodali </b><br/>Team Member
+    <b> Akash Chowdary Kodali </b><br/>Team Member
   </div>
   </div>
   <div className="col-12 col-md-3">
