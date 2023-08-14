@@ -133,7 +133,7 @@ export function get_donation() {
     // console.log(donator_phone);
     document.getElementById("donator_phone_error").innerHTML = "";
   }
-  const donator_blood = document.getElementById("Blood_group").value;
+  // const donator_blood = document.getElementById("Blood_group").value;
   // const donator_blood = select.options[select.selectedIndex].value;
   console.log(donator_blood);
   if (!donator_blood === "") {
@@ -144,8 +144,8 @@ export function get_donation() {
   } else {
     document.getElementById("donator_blood_error").innerHTML = "";
   }
-  const donator_gender = document.getElementById("Gender").value;
-  if (donator_gender !== "") {
+  // const donator_gender = document.getElementById("Gender").value;
+  if (donator_gender === "") {
     document.getElementById("donator_gender_error").innerHTML =
       "Select a gender.";
     document.getElementById("donator_gender_error").style.color = "red";
@@ -279,7 +279,7 @@ async function add_to_donation() {
         // console.log("Document has been added successfully");
         alert("Thank You for the Donation.");
         // await sendemail_donation(donation_data.donator_email);
-        setTimeout(myURL, 3000);
+        setTimeout(myURL, 500);
         function myURL() {
           window.location.href = "#";
         }
