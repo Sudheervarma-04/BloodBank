@@ -32,7 +32,7 @@ initializeApp(firebaseConfig);
 const db = getFirestore();
 
 export function get_request() {
-  console.log("getting");
+  // console.log("getting");
   const patient_name = document.getElementById("Patient_name").value;
   if (patient_name.length === 0) {
     document.getElementById("patient_name_error").innerHTML =
@@ -41,20 +41,6 @@ export function get_request() {
     return false;
   } else {
     document.getElementById("patient_name_error").innerHTML = "";
-  }
-  const patient_age = document.getElementById("patient_dob").value;
-  if (patient_age.length === 0) {
-    document.getElementById("patient_dob_error").innerHTML =
-      "Kindly enter age.";
-    document.getElementById("patient_dob_error").style.color = "red";
-    return false;
-  } else if (patient_age === 0 || patient_age > 100 || patient_age < 0) {
-    document.getElementById("patient_dob_error").innerHTML =
-      "Kindly enter valid age.";
-    document.getElementById("patient_dob_error").style.color = "red";
-    return false;
-  } else {
-    document.getElementById("patient_dob_error").innerHTML = "";
   }
   const patient_email = document.getElementById("patient_email").value;
   if (
@@ -71,6 +57,38 @@ export function get_request() {
   } else {
     document.getElementById("patient_email_error").innerHTML = "";
   }
+  const patient_gender = document.getElementById("PGender").value;
+  if (patient_gender === "") {
+    document.getElementById("patient_gender_error").innerHTML =
+      "Kindly select gender.";
+    document.getElementById("patient_gender_error").style.color = "red";
+    return false;
+  } else {
+    document.getElementById("patient_gender_error").innerHTML = "";
+  }
+  const patient_age = document.getElementById("patient_dob").value;
+  if (patient_age.length === 0) {
+    document.getElementById("patient_dob_error").innerHTML =
+      "Kindly enter age.";
+    document.getElementById("patient_dob_error").style.color = "red";
+    return false;
+  } else if (patient_age === 0 || patient_age > 100 || patient_age < 0) {
+    document.getElementById("patient_dob_error").innerHTML =
+      "Kindly enter valid age.";
+    document.getElementById("patient_dob_error").style.color = "red";
+    return false;
+  } else {
+    document.getElementById("patient_dob_error").innerHTML = "";
+  }
+  const patient_blood = document.getElementById("PBlood_group_request").value;
+  if (patient_blood === "") {
+    document.getElementById("patient_blood_error").innerHTML =
+      "Kindly select blood group.";
+    document.getElementById("patient_blood_error").style.color = "red";
+    return false;
+  } else {
+    document.getElementById("patient_blood_error").innerHTML = "";
+  }
   const patient_phone = document.getElementById("patient_phone").value;
   if (patient_phone.length !== 10) {
     document.getElementById("patient_phone_error").innerHTML =
@@ -80,36 +98,28 @@ export function get_request() {
   } else {
     document.getElementById("patient_phone_error").innerHTML = "";
   }
-
-  const patient_blood = document.getElementById("PBlood_group_request").value;
-  if (patient_blood === "Enter Blood Group") {
-    document.getElementById("patient_blood_error").innerHTML =
-      "Kindly select blood group.";
-    document.getElementById("patient_blood_error").style.color = "red";
-    return false;
-  } else {
-    document.getElementById("patient_blood_error").innerHTML = "";
-  }
   const patient_required_date = new Date(
     document.getElementById("required_date").value
   );
-  const date2 = new Date();
-  const diffTime = patient_required_date - date2;
-  console.log(diffTime);
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-  console.log(diffDays);
-  if (patient_required_date === "Invalid Date") {
+  if (isNaN(patient_required_date.getTime())) {
     document.getElementById("patient_required_error").innerHTML =
       "Kindly fill the required date.";
     document.getElementById("patient_required_error").style.color = "red";
     return false;
-  } else if (diffDays < 0) {
-    document.getElementById("patient_required_error").innerHTML =
-      "Can't request in past";
-    document.getElementById("patient_required_error").style.color = "red";
-    return false;
   } else {
-    document.getElementById("patient_required_error").innerHTML = "";
+    const date2 = new Date();
+    const diffTime = patient_required_date - date2;
+    // console.log(diffTime);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    // console.log(diffDays);
+    if (diffDays < 0) {
+      document.getElementById("patient_required_error").innerHTML =
+        "Can't request in past";
+      document.getElementById("patient_required_error").style.color = "red";
+      return false;
+    } else {
+      document.getElementById("patient_required_error").innerHTML = "";
+    }
   }
   const no_of_units = document.getElementById("no_of_units").value;
   if (no_of_units <= 0) {
@@ -136,16 +146,7 @@ export function get_request() {
   } else {
     document.getElementById("patient_units_error").innerHTML = "";
   }
-  const patient_gender = document.getElementById("PGender").value;
-  if (patient_gender === "Enter Gender") {
-    document.getElementById("patient_gender_error").innerHTML =
-      "Kindly select gender.";
-    document.getElementById("patient_gender_error").style.color = "red";
-    return false;
-  } else {
-    document.getElementById("patient_gender_error").innerHTML = "";
-  }
-
+  
   const purpose_request = document.getElementById("purpose_request").value;
   if (purpose_request.length === 0) {
     document.getElementById("patient_purpose_error").innerHTML =
@@ -205,9 +206,9 @@ export function get_request() {
 // }
 
 async function add_to_request() {
-  console.log("called");
+  // console.log("called");
   const request_data = JSON.parse(get_request());
-  console.log(request_data);
+  // console.log(request_data);
   // let flag = 0;
   if (!request_data) {
     return false;
@@ -247,11 +248,15 @@ async function add_to_request() {
   //   return 0;
   // }
   const time = new Date();
-  console.log(time);
+  // console.log(time);
   const dbRef = collection(db, "Request");
-  console.log("adding");
+  // console.log("adding");
   const docref = doc(
-    collection(dbRef, `${time.getDate()}-${time.getMonth()+1}-${time.getFullYear()}`, request_data.patient_blood + "_request"),
+    collection(
+      dbRef,
+      `${time.getDate()}-${time.getMonth() + 1}-${time.getFullYear()}`,
+      request_data.patient_blood + "_request"
+    ),
     request_data.patient_name
   );
   const docsnap = await getDoc(docref);
@@ -269,7 +274,7 @@ async function add_to_request() {
       Phone: request_data.patient_phone,
     })
       .then(async (docRef) => {
-        console.log("Document has been added successfully");
+        // console.log("Document has been added successfully");
         // await sendemail_request(request_data.patient_email);
         await searchdonor(request_data.patient_blood);
         alert("We have registered your request. Redirecting to Home.");
@@ -279,7 +284,7 @@ async function add_to_request() {
         }
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   } else {
     alert("Can't Request twice");
@@ -289,13 +294,13 @@ async function add_to_request() {
 async function searchdonor(blood_group) {
   var docs = new Array([]);
   const donation = query(collectionGroup(db, blood_group + "_donate"));
-  console.log("searching");
+  // console.log("searching");
   // const querySnapshot = await getDocs(collection(db, view_type));
   const querySnapshot = await getDocs(donation);
-  console.log("got hit");
-  console.log(querySnapshot);
+  // console.log("got hit");
+  // console.log(querySnapshot);
   querySnapshot.forEach(async (doc) => {
-    console.log(doc.data());
+    // console.log(doc.data());
     const dateOne = new Date();
     const dateTwo = new Date(doc.data().Date_of_creation);
     const time = Math.abs(dateTwo - dateOne);
@@ -305,7 +310,7 @@ async function searchdonor(blood_group) {
     }
     // console.log(doc.id, " => ", doc.data());
   });
-  console.log(docs);
+  // console.log(docs);
   return docs;
 }
 export { add_to_request };
