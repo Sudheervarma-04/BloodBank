@@ -42,6 +42,18 @@ export function get_request() {
   } else {
     document.getElementById("patient_name_error").innerHTML = "";
   }
+  
+  
+  
+  const patient_blood = document.getElementById("PBlood_group_request").value;
+  if (patient_blood === "") {
+    document.getElementById("patient_blood_error").innerHTML =
+      "Kindly select blood group.";
+    document.getElementById("patient_blood_error").style.color = "red";
+    return false;
+  } else {
+    document.getElementById("patient_blood_error").innerHTML = "";
+  }
   const patient_email = document.getElementById("patient_email").value;
   if (
     !(
@@ -57,38 +69,6 @@ export function get_request() {
   } else {
     document.getElementById("patient_email_error").innerHTML = "";
   }
-  const patient_gender = document.getElementById("PGender").value;
-  if (patient_gender === "") {
-    document.getElementById("patient_gender_error").innerHTML =
-      "Kindly select gender.";
-    document.getElementById("patient_gender_error").style.color = "red";
-    return false;
-  } else {
-    document.getElementById("patient_gender_error").innerHTML = "";
-  }
-  const patient_age = document.getElementById("patient_dob").value;
-  if (patient_age.length === 0) {
-    document.getElementById("patient_dob_error").innerHTML =
-      "Kindly enter age.";
-    document.getElementById("patient_dob_error").style.color = "red";
-    return false;
-  } else if (patient_age === 0 || patient_age > 100 || patient_age < 0) {
-    document.getElementById("patient_dob_error").innerHTML =
-      "Kindly enter valid age.";
-    document.getElementById("patient_dob_error").style.color = "red";
-    return false;
-  } else {
-    document.getElementById("patient_dob_error").innerHTML = "";
-  }
-  const patient_blood = document.getElementById("PBlood_group_request").value;
-  if (patient_blood === "") {
-    document.getElementById("patient_blood_error").innerHTML =
-      "Kindly select blood group.";
-    document.getElementById("patient_blood_error").style.color = "red";
-    return false;
-  } else {
-    document.getElementById("patient_blood_error").innerHTML = "";
-  }
   const patient_phone = document.getElementById("patient_phone").value;
   if (patient_phone.length !== 10) {
     document.getElementById("patient_phone_error").innerHTML =
@@ -97,6 +77,15 @@ export function get_request() {
     return false;
   } else {
     document.getElementById("patient_phone_error").innerHTML = "";
+  }
+  const patient_gender = document.getElementById("PGender").value;
+  if (patient_gender === "") {
+    document.getElementById("patient_gender_error").innerHTML =
+      "Kindly select gender.";
+    document.getElementById("patient_gender_error").style.color = "red";
+    return false;
+  } else {
+    document.getElementById("patient_gender_error").innerHTML = "";
   }
   const patient_required_date = new Date(
     document.getElementById("required_date").value
@@ -120,6 +109,20 @@ export function get_request() {
     } else {
       document.getElementById("patient_required_error").innerHTML = "";
     }
+  }
+  const patient_age = document.getElementById("patient_dob").value;
+  if (patient_age.length === 0) {
+    document.getElementById("patient_dob_error").innerHTML =
+      "Kindly enter age.";
+    document.getElementById("patient_dob_error").style.color = "red";
+    return false;
+  } else if (patient_age === 0 || patient_age > 100 || patient_age < 0) {
+    document.getElementById("patient_dob_error").innerHTML =
+      "Kindly enter valid age.";
+    document.getElementById("patient_dob_error").style.color = "red";
+    return false;
+  } else {
+    document.getElementById("patient_dob_error").innerHTML = "";
   }
   const no_of_units = document.getElementById("no_of_units").value;
   if (no_of_units <= 0) {
