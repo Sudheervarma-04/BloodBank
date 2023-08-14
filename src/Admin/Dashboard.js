@@ -1,7 +1,6 @@
 import React from "react";
 import "../project_styles/Admin-page.css";
 import "../assets/img/bloodbank logo.png";
-import "../Admin/AdminNav";
 import { Link } from "react-router-dom";
 
 export default function Dashboard() {
