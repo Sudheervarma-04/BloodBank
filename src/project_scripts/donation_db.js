@@ -133,8 +133,26 @@ export function get_donation() {
     // console.log(donator_phone);
     document.getElementById("donator_phone_error").innerHTML = "";
   }
-  
-  
+  const donator_blood = document.getElementById("Blood_group").value;
+  // const donator_blood = select.options[select.selectedIndex].value;
+  console.log(donator_blood);
+  if (!donator_blood === "") {
+    document.getElementById("donator_blood_error").innerHTML =
+      "Kindly select blood group.";
+    document.getElementById("donator_blood_error").style.color = "red";
+    return false;
+  } else {
+    document.getElementById("donator_blood_error").innerHTML = "";
+  }
+  const donator_gender = document.getElementById("Gender").value;
+  if (donator_gender !== "") {
+    document.getElementById("donator_gender_error").innerHTML =
+      "Select a gender.";
+    document.getElementById("donator_gender_error").style.color = "red";
+    return false;
+  } else {
+    document.getElementById("donator_gender_error").innerHTML = "";
+  }
   const donator_dob = new Date(document.getElementById("Donator_dob").value);
   // console.log(donator_dob);
   if (

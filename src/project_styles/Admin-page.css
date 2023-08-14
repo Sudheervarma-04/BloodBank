@@ -4,7 +4,7 @@
   box-sizing: border-box;
   font-family: 'system.ui'
 }
-body {
+.adminbody{
   background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../project_assets/GIMSR\(Front\).webp);
   background-size: cover;
 }
