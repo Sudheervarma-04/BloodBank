@@ -58,6 +58,18 @@ export function get_donation() {
   } else {
     document.getElementById("donator_name_error").innerHTML = "";
   }
+  const donator_blood = document.getElementById("Blood_group").value;
+  // const donator_blood = select.options[select.selectedIndex].value;
+  // console.log(donator_blood);
+  if (donator_blood === "") {
+    document.getElementById("donator_blood_error").innerHTML =
+      "Kindly select blood group.";
+    document.getElementById("donator_blood_error").style.color = "red";
+    return false;
+  } else {
+    document.getElementById("donator_blood_error").innerHTML = "";
+  }
+
   const donator_email = document.getElementById("Donator_email").value;
 
   var validRegex =
@@ -90,6 +102,15 @@ export function get_donation() {
       document.getElementById("donator_email_error").style.color = "red";
       return false;
   }
+  const donator_gender = document.getElementById("Gender").value;
+  if (donator_gender === "") {
+    document.getElementById("donator_gender_error").innerHTML =
+      "Select a gender.";
+    document.getElementById("donator_gender_error").style.color = "red";
+    return false;
+  } else {
+    document.getElementById("donator_gender_error").innerHTML = "";
+  }
   const donator_phone = document.getElementById("Donator_phone").value;
   if (donator_phone.length !== 10) {
     document.getElementById("donator_phone_error").innerHTML =
@@ -112,26 +133,8 @@ export function get_donation() {
     // console.log(donator_phone);
     document.getElementById("donator_phone_error").innerHTML = "";
   }
-  const donator_blood = document.getElementById("Blood_group").value;
-  // const donator_blood = select.options[select.selectedIndex].value;
-  // console.log(donator_blood);
-  if (donator_blood === "") {
-    document.getElementById("donator_blood_error").innerHTML =
-      "Kindly select blood group.";
-    document.getElementById("donator_blood_error").style.color = "red";
-    return false;
-  } else {
-    document.getElementById("donator_blood_error").innerHTML = "";
-  }
-  const donator_gender = document.getElementById("Gender").value;
-  if (donator_gender === "") {
-    document.getElementById("donator_gender_error").innerHTML =
-      "Select a gender.";
-    document.getElementById("donator_gender_error").style.color = "red";
-    return false;
-  } else {
-    document.getElementById("donator_gender_error").innerHTML = "";
-  }
+  
+  
   const donator_dob = new Date(document.getElementById("Donator_dob").value);
   // console.log(donator_dob);
   if (
