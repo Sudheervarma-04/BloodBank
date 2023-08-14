@@ -28,7 +28,7 @@ const db = getFirestore();
 //   }
 // }
 export function get_donation() {
-  console.log("getting");
+  // console.log("getting");
   // const donator_name_field = document.getElementById("Donator_name");
   const donator_name = document.getElementById("Donatorname").value;
   if (donator_name.length === 0) {
@@ -84,6 +84,12 @@ export function get_donation() {
       document.getElementById("donator_email_error").innerHTML = "";
     }
   }
+  else{
+      document.getElementById("donator_email_error").innerHTML =
+        "Enter a valid E-mail.";
+      document.getElementById("donator_email_error").style.color = "red";
+      return false;
+  }
   const donator_phone = document.getElementById("Donator_phone").value;
   if (donator_phone.length !== 10) {
     document.getElementById("donator_phone_error").innerHTML =
@@ -103,13 +109,13 @@ export function get_donation() {
     document.getElementById("donator_phone_error").style.color = "red";
     return false;
   } else {
-    console.log(donator_phone);
+    // console.log(donator_phone);
     document.getElementById("donator_phone_error").innerHTML = "";
   }
   const donator_blood = document.getElementById("Blood_group").value;
   // const donator_blood = select.options[select.selectedIndex].value;
-  console.log(donator_blood);
-  if (!donator_blood === "") {
+  // console.log(donator_blood);
+  if (donator_blood === "") {
     document.getElementById("donator_blood_error").innerHTML =
       "Kindly select blood group.";
     document.getElementById("donator_blood_error").style.color = "red";
@@ -118,7 +124,7 @@ export function get_donation() {
     document.getElementById("donator_blood_error").innerHTML = "";
   }
   const donator_gender = document.getElementById("Gender").value;
-  if (donator_gender !== "") {
+  if (donator_gender === "") {
     document.getElementById("donator_gender_error").innerHTML =
       "Select a gender.";
     document.getElementById("donator_gender_error").style.color = "red";
@@ -127,7 +133,11 @@ export function get_donation() {
     document.getElementById("donator_gender_error").innerHTML = "";
   }
   const donator_dob = new Date(document.getElementById("Donator_dob").value);
-  if (donator_dob === "Invalid Date") {
+  // console.log(donator_dob);
+  if (
+    isNaN(donator_dob.getTime())
+  ) {
+    // console.log("invalue");
     document.getElementById("donator_dob_error").innerHTML = "Invalid DOB.";
     document.getElementById("donator_dob_error").style.color = "red";
     return false;
@@ -154,7 +164,7 @@ export function get_donation() {
     donator_phone: donator_phone,
     donator_address: donator_address,
   });
-  console.log(json);
+  // console.log(json);
   return json;
   // return [
   //   donator_name,
@@ -168,7 +178,7 @@ export function get_donation() {
 }
 
 async function check_age(dob) {
-  console.log("checking");
+  // console.log("checking");
   var new_dob = new Date(dob);
   var dob_year = new_dob.getFullYear();
   function getAge(birthYear) {
@@ -182,21 +192,21 @@ async function check_age(dob) {
 }
 
 async function add_to_donation() {
-  console.log("called");
+  // console.log("called");
   const donation_data = JSON.parse(get_donation());
   // let flag = 0;
-  console.log(donation_data[3]);
-  console.log(donation_data);
+  // console.log(donation_data[3]);
+  // console.log(donation_data);
   if (!donation_data) {
     return 0;
   }
   const time = new Date();
-  console.log(time);
+  // console.log(time);
   const dbRef = collection(db, "Donate");
-  console.log(typeof donation_data.donator_dob);
+  // console.log(typeof donation_data.donator_dob);
   var age_donor = await check_age(donation_data.donator_dob);
   if (age_donor > 18 && age_donor < 65) {
-    console.log("Checked");
+    // console.log("Checked");
     // if (donate_check(donation_data.donator_phone)) {
     //   await setDoc(doc(db, "Donate", donation_data.donator_phone), {
     //     Time_of_creation: {
@@ -222,7 +232,7 @@ async function add_to_donation() {
     //     .catch((error) => {
     //       console.log(error);
     //     });
-    console.log("adding");
+    // console.log("adding");
     await setDoc(
       doc(
         collection(
@@ -245,7 +255,7 @@ async function add_to_donation() {
       }
     )
       .then(async (docRef) => {
-        console.log("Document has been added successfully");
+        // console.log("Document has been added successfully");
         alert("Thank You for the Donation.");
         // await sendemail_donation(donation_data.donator_email);
         setTimeout(myURL, 3000);
@@ -254,7 +264,7 @@ async function add_to_donation() {
         }
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   } else {
     if (age_donor < 18) {
