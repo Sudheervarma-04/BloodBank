@@ -17,11 +17,11 @@ export default function DonateNew() {
         <br/>
         <Row>
         <Col className='col-md-6 col-12'>
-    <Form.Label style={{color: "white"}}>First Name</Form.Label>
+    <Form.Label style={{color: "white"}}>Full Name</Form.Label>
       <Form.Control
         type="text"
         id="Donatorname"
-        placeholder='Enter your first name'
+        placeholder='Enter your Full Name'
         className='pb-2'
       />
       <p id="donator_name_error"></p>
@@ -51,7 +51,7 @@ export default function DonateNew() {
       <Form.Control
         type="email"
         id="Donator_email"
-        placeholder='Enter Email'
+        placeholder='Enter your Email'
         className='pb-2'
       />
       <p id="donator_email_error"></p>
@@ -60,9 +60,9 @@ export default function DonateNew() {
     <Form.Label style={{color: "white"}}>Gender</Form.Label>
       <Form.Select aria-label="Gender" id="Gender">
       <option>Select Gender</option>
-      <option value="1">Male</option>
-      <option value="2">Female</option>
-      <option value="3">Other</option>
+      <option value="Male">Male</option>
+      <option value="Female">Female</option>
+      <option value="Others">Other</option>
       </Form.Select>
       <p id="donator_gender_error"></p>
         </Col>
