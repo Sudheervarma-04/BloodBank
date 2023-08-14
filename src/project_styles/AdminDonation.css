@@ -14,11 +14,23 @@ p{
   font-size:larger;
   color:rgb(235, 87, 87);
 }
+.select{
+  white-space: pre-line;
+}
 .dropdown{
   font-size:larger;
 }
 .dropbtn{
   text-align: center;
+  padding-top: 20px;
+}
+#Blood_group_request{
+  display: block;
+  white-space: pre-line;
+}
+#check_donate{
+  display: block;
+  white-space: pre-line;
 }
 table, th, td {
   border:1px solid rgb(255, 253, 253);
