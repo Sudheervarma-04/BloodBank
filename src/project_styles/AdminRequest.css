@@ -1,10 +1,7 @@
 *{
   font-family: 'system-ui'
 }
-  body{
-  background-image:linear-gradient(rgba(65,80,90,0.6),rgba(65, 80, 90, 0.6));
-  background-size: 100%; 
-}
+
 h1{
   text-align: center;
   color:rgb(235, 87, 87);
