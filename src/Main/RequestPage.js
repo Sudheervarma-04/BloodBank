@@ -1,10 +1,10 @@
-import React from 'react';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import '../project_styles/donatepage.css';
-import Button from 'react-bootstrap/Button';
-import { add_to_request, } from '../project_scripts/request_db';
+import React from "react";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Form from "react-bootstrap/Form";
+import "../project_styles/donatepage.css";
+import Button from "react-bootstrap/Button";
+import { add_to_request } from "../project_scripts/request_db";
 export default function RequestNew() {
   return (
     <div className="">
@@ -20,7 +20,7 @@ export default function RequestNew() {
               <Form.Control
                 type="text"
                 id="Patient_name"
-                placeholder="Enter your name"
+                placeholder="Enter your Full Name"
                 className="pb-2 "
               />
               <p id="patient_name_error"></p>
@@ -48,7 +48,7 @@ export default function RequestNew() {
               <Form.Control
                 type="email"
                 id="patient_email"
-                placeholder="Enter Email"
+                placeholder="Enter your Email"
                 className="pb-2"
               />
               <p id="patient_email_error"></p>
@@ -81,7 +81,7 @@ export default function RequestNew() {
               <Form.Control
                 type="date"
                 id="required_date"
-                placeholder="Enter Date of Birth"
+                placeholder="Enter Required Date"
                 className="pb-2"
               />
               <p id="patient_required_error"></p>
@@ -94,7 +94,7 @@ export default function RequestNew() {
               <Form.Control
                 type="email"
                 id="patient_dob"
-                placeholder="Enter Email"
+                placeholder="Enter your Age"
                 className="pb-2"
               />
               <p id="patient_dob_error"></p>
@@ -106,7 +106,7 @@ export default function RequestNew() {
               <Form.Control
                 type="number"
                 id="no_of_units"
-                placeholder="Enter Phone Number"
+                placeholder="Enter No of Units Required"
                 className="pb-2"
               />
               <p id="patient_units_error"></p>
@@ -135,9 +135,7 @@ export default function RequestNew() {
             </center>
           </div>
         </div>
-        
       </div>
-
     </div>
   );
 }
