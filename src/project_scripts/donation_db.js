@@ -118,7 +118,7 @@ export function get_donation() {
     document.getElementById("donator_blood_error").innerHTML = "";
   }
   const donator_gender = document.getElementById("Gender").value;
-  if (donator_gender !== "") {
+  if (donator_gender === "") {
     document.getElementById("donator_gender_error").innerHTML =
       "Select a gender.";
     document.getElementById("donator_gender_error").style.color = "red";
