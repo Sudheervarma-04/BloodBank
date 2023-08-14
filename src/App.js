@@ -3,6 +3,9 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../src/Main/Home";
 import About from "../src/Main/About";
 import Navbar from "./components/Navbar";
+import Dashboard from "./Admin/Dashboard";
+import AdminDonationPage from "./Admin/AdminDonationpage";
+import AdminRequestPage from "./Admin/AdminRequestpage";
 import { ScrollToTop } from "./components/scrolltoTop";
 import { useEffect } from "react";
 import { db_transactions } from "./project_scripts/db_transactions";
@@ -37,6 +40,9 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/donate" element={<DonateNew />} />
           <Route path="/request" element={<RequestNew />} />
+          <Route path="/admin" element={<Dashboard />} />
+          <Route path="/admindonatepage" element={<AdminDonationPage />} />
+          <Route path="/adminrequestpage" element={<AdminRequestPage />} />
         </Routes>
       </Router>
     </div>
