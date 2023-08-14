@@ -3,6 +3,7 @@ import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../src/Main/Home";
 import About from "../src/Main/About";
 import Navbar from "./components/Navbar";
+import AdminLogin from "./Admin/AdminLogin";
 import Dashboard from "./Admin/Dashboard";
 import AdminDonationPage from "./Admin/AdminDonationpage";
 import AdminRequestPage from "./Admin/AdminRequestpage";
@@ -39,7 +40,8 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/donate" element={<DonateNew />} />
           <Route path="/request" element={<RequestNew />} />
-          <Route path="/admin" element={<Dashboard />} />
+          <Route path="/adminlogin" element={<AdminLogin/>}/>
+          <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/admindonatepage" element={<AdminDonationPage />} />
           <Route path="/adminrequestpage" element={<AdminRequestPage />} />
         </Routes>

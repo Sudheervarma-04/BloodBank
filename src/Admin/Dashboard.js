@@ -2,7 +2,6 @@ import React from "react";
 import "../project_styles/Admin-page.css";
 import "../assets/img/bloodbank logo.png";
 import "../Admin/AdminNav";
-// import 'https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css';
 import { Link } from "react-router-dom";
 
 export default function Dashboard() {
@@ -40,10 +39,10 @@ export default function Dashboard() {
               </Link>
             </li>
             <li className="list">
-              <a href="../Login.html" className="nav-link">
+              <Link to="/adminlogin" className="nav-link">
                 <i className="bx bx-log-out log-out"></i>
                 <span className="link">Log-out</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
