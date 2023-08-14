@@ -33,12 +33,13 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
         <div className="container-fluid">
+          <Link to="/">
           <img
             src={img1}
             alt="Logo"
             className="d-inline-block align-text-top nav-logo-custom"
           />
-
+          </Link>
           <button
             onClick={ToggleAction}
             className="navbar-toggler"
