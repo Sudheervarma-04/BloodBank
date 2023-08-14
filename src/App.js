@@ -39,7 +39,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/donate" element={<DonateNew />} />
           <Route path="/request" element={<RequestNew />} />
-          <Route exact path="/admin" index element={<Dashboard />} />
+          <Route path="/admin" element={<Dashboard />} />
           <Route path="/admindonatepage" element={<AdminDonationPage />} />
           <Route path="/adminrequestpage" element={<AdminRequestPage />} />
         </Routes>
