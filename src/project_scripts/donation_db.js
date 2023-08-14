@@ -62,25 +62,27 @@ export function get_donation() {
 
   var validRegex =
     /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  if (!donator_email.match(validRegex)) {
-    document.getElementById("donator_email_error").innerHTML =
-      "Enter a valid E-mail.";
-    document.getElementById("donator_email_error").style.color = "red";
-    return false;
-  }
-  if (
-    !(
-      (donator_email.includes("@") && donator_email.includes(".in")) ||
-      (donator_email.includes("@") && donator_email.includes(".com")) ||
-      (donator_email.includes("@") && donator_email.includes(".edu"))
-    )
-  ) {
-    document.getElementById("donator_email_error").innerHTML =
-      "Enter a valid E-mail.";
-    document.getElementById("donator_email_error").style.color = "red";
-    return false;
-  } else {
-    document.getElementById("donator_email_error").innerHTML = "";
+  if (donator_email !== "") {
+    if (!donator_email.match(validRegex)) {
+      document.getElementById("donator_email_error").innerHTML =
+        "Enter a valid E-mail.";
+      document.getElementById("donator_email_error").style.color = "red";
+      return false;
+    }
+    if (
+      !(
+        (donator_email.includes("@") && donator_email.includes(".in")) ||
+        (donator_email.includes("@") && donator_email.includes(".com")) ||
+        (donator_email.includes("@") && donator_email.includes(".edu"))
+      )
+    ) {
+      document.getElementById("donator_email_error").innerHTML =
+        "Enter a valid E-mail.";
+      document.getElementById("donator_email_error").style.color = "red";
+      return false;
+    } else {
+      document.getElementById("donator_email_error").innerHTML = "";
+    }
   }
   const donator_phone = document.getElementById("Donator_phone").value;
   if (donator_phone.length !== 10) {
@@ -107,7 +109,7 @@ export function get_donation() {
   const donator_blood = document.getElementById("Blood_group").value;
   // const donator_blood = select.options[select.selectedIndex].value;
   console.log(donator_blood);
-  if (donator_blood === "Enter Blood Group") {
+  if (!donator_blood === "") {
     document.getElementById("donator_blood_error").innerHTML =
       "Kindly select blood group.";
     document.getElementById("donator_blood_error").style.color = "red";
@@ -116,7 +118,7 @@ export function get_donation() {
     document.getElementById("donator_blood_error").innerHTML = "";
   }
   const donator_gender = document.getElementById("Gender").value;
-  if (donator_gender === "Enter Gender") {
+  if (donator_gender !== "") {
     document.getElementById("donator_gender_error").innerHTML =
       "Select a gender.";
     document.getElementById("donator_gender_error").style.color = "red";
@@ -244,7 +246,7 @@ async function add_to_donation() {
     )
       .then(async (docRef) => {
         console.log("Document has been added successfully");
-        alert("Thank You for the Donation.")
+        alert("Thank You for the Donation.");
         // await sendemail_donation(donation_data.donator_email);
         setTimeout(myURL, 3000);
         function myURL() {

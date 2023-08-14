@@ -1,31 +1,26 @@
+.background-from-pages{
+  min-height: 100vh;
+  background-color: #0f0f0f;
+  padding-top: 50px;
+}
+
 .class1
 {
-    padding: 7rem;
-    margin-left: 30rem;
+    display: flex;
+    max-width: 900px;
+    margin: auto;
+    flex-direction: column;
 }
 
-.image{
-  background-image: url('../assets/img/Background_form.png') !important;
-  background-repeat: no-repeat;
-
-}
 
 @media only screen and (max-width: 1000px) {
   .image
   {
-    background-image: none !important;
-  }
-  .class1
-  {
-    transform: translate(-50%,0%);
+    display: none !important;
   }
 }
 @media screen  and (min-width: 0px) and (max-width: 800px)
 {
 
-    .class1
-    {
-        padding: 7rem;
-        margin-left: 50vw;
-    }
+
 }
