@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { db_transactions } from "./project_scripts/db_transactions";
 import DonateNew from "./Main/DonatePage";
 import RequestNew from "./Main/RequestPage";
+import "./App.css";
 // import { donation_js } from "./project_scripts/donation_db";
 export default function App() {
   useEffect(() => {
