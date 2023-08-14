@@ -4,37 +4,41 @@
 	font-family: 'Inter', sans-serif;
 	font-weight: bold;
 }
-.wholebody
-{
-	max-width: 1400px;
-	margin: 5px;
-	position: relative;
+.Wholebody
+{	
+	padding-top: 100px;
+	max-width: 1200px;
+	margin: auto;
+	/* margin: 5px; */
 }
-#tooplate_middle { 
+.desc{
+	margin: 10px;
+	padding: 10px;
+}
+/* #tooplate_middle { 
 
  	height: 55vh;
 	padding: 50px;
 	margin-top: 8vh;
 	margin-bottom: 10px;
 	background-size: cover;
-}
+} */
 
 
-#tooplate_wrapper { 
+/* #tooplate_wrapper { 
 	width: 940px; 
 	padding: 0 10px 10px; 
 	margin: 0 auto; 
-}
+} */
 
 
-#mid_left { 
-	float:left; 
-	/* width: 340px;  */
-}
 
 #mid_slider { 
 	max-width: 600px;
-	min-height: 40vh;
+	margin: auto;
+	/* max-height: 500px; */
+	min-width: 300px;
+	min-height: 300px;
 	background: url("https://penntoday.upenn.edu/sites/default/files/2020-04/iStock-627356286_SOCIAL.jpg"); 
 	background-size: cover;
 	border-radius: 10px;
@@ -54,6 +58,7 @@
 	font-size: 14px; 
 	line-height: 26px; 
 }
+
 #mid_title { 
 	font-size: 30px; 
 	line-height: 38px; 
@@ -62,24 +67,32 @@
 	margin-bottom: 10px;  
 }
 
-#tooplate_main {
-	clear: both;
-	max-width: 1200px;
-	padding: 20px;
-	position: relative !important;
-	margin: auto;
-	background: #ffffff;
+
+
+.desc-toolplate{
 	display: flex;
 	flex-wrap: wrap;
-	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.desc-main-div{
+	max-width: 300px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center	;
 }
 
 	.img1{
-		height:10vh;
+		height:100px;
+		width: 100px;
 		margin-top: auto;
-		width: 5vw;
 		
 	}
+
+	.img2
 
 	h3{
 		color: #000000;
@@ -117,15 +130,27 @@
 	   font-size: 18px;
 	}
   
-  
+.outer-dev-box{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+}	
+
+.dev-name{
+	text-align: center;
+}
   .box{
-	width:20vw;
-  height: 60vh; 
+	margin: 10px;
+	width: 300px;
+	max-width: 400px;
+	/* height: ; */
+  height: 400px; 
   background: #D9D9D9;
   background-image: url('../img/YASHWANTSIR.webp');
-  background-size: auto;
-  background-repeat: no-repeat;
-  border-radius: 0px;
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  /* border-radius: 0px; */
   box-shadow:
   2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
   6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
@@ -138,11 +163,9 @@
   }
   
   .box-1{
-	width:20vw;
-	height: 60vh;
-	background-size: auto;
-	background-repeat: no-repeat;
+	background-size: cover;
 	background-image: url('../img/snehil.jpg');
+	max-width: 300px;
 
   box-shadow:
   2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
@@ -156,6 +179,7 @@
   .box-2{
 	background-image: url('../img/shashank.jpg');
   background-size: cover;
+  max-width: 300px;
   box-shadow:
   2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
   6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
@@ -168,6 +192,7 @@
   .box-3{
 	background-image: url('../img/harsha.jpg');
   background-size: cover;
+  max-width: 300px;
   box-shadow:
   2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
   6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
@@ -180,6 +205,7 @@
   .box-4{
 	background-image: url('../img/sudheer.jpg');
   background-size: cover;
+  max-width: 300px;
   box-shadow:
   2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
   6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
@@ -189,6 +215,7 @@
   100px 100px 80px rgba(0, 0, 0, 0.07);
   }
   .box-6{
+	max-width: 300px;
 	background-image: url('../img/akash.jpg');
   background-size: cover;
   box-shadow:
@@ -283,13 +310,9 @@
 	  flex-direction: column;
 	  padding: 50px;
 	}
-	#mid_slider
-	{
-		display: none;
-	}
 
 	
-	h1 {
+	/* h1 {
 	  font-size: 1.9rem;
 	}
 	
@@ -299,7 +322,7 @@
 	
 	p {
 	  font-size: 0.8rem;
-	}
+	} */
 }
 
 
@@ -319,10 +342,4 @@ letter-spacing: 1px;
 
 
   @media screen  and (min-width: 0px) and (max-width: 800px){
-	#mid_slider{
-		display: none;
-	}  
-	#tooplate_main{
-		display: none;
-	} 
 }
