@@ -28,16 +28,15 @@ export default function RequestNew() {
             <Col className="col-md-6 col-12">
               <Form.Label style={{ color: "white" }}>Blood Group</Form.Label>
               <Form.Select id="PBlood_group_request" aria-label="BloodGroup">
-                <option>Select Blood Group</option>
-                <option value="1">A+</option>
-                <option value="2">A-</option>
-                <option value="3">B+</option>
-                <option value="3">B-</option>
-                <option value="3">O+</option>
-                <option value="3">O-</option>
-                <option value="3">AB+</option>
-                <option value="3">AB-</option>
-                <option value="3">Other</option>
+                <option value="">Select Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
               </Form.Select>
               <p id="patient_blood_error"></p>
             </Col>
@@ -70,10 +69,10 @@ export default function RequestNew() {
             <Col className="col-md-6 col-12">
               <Form.Label style={{ color: "white" }}>Gender</Form.Label>
               <Form.Select id="PGender" aria-label="Gender">
-                <option>Select Gender</option>
-                <option value="1">Male</option>
-                <option value="2">Female</option>
-                <option value="3">Other</option>
+                <option value="">Select Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
               </Form.Select>
               <p id="patient_gender_error"></p>
             </Col>
