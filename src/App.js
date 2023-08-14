@@ -55,9 +55,9 @@ export default function App() {
         <Route path="/donate" element={<DonateNew />} />
         <Route path="/request" element={<RequestNew />} />
         <Route path="/adminlogin" element={<AdminLogin />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        {/* <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/admindonatepage" element={<AdminDonationPage />} />
-        <Route path="/adminrequestpage" element={<AdminRequestPage />} />
+        <Route path="/adminrequestpage" element={<AdminRequestPage />} /> */}
       </Routes>
     </div>
   );

@@ -4,6 +4,7 @@ import {
   getDocs,
   collection,
 } from "firebase/firestore/lite";
+// import { resolve } from "path";
 const firebaseConfig = {
   apiKey: "AIzaSyC-ib62fjrfWgq7jis-8EngXAfRnEaV2t4",
   authDomain: "blood-bank-3f5d5.firebaseapp.com",
@@ -18,68 +19,34 @@ const db = getFirestore();
 async function login_form() {
   const login_id = document.getElementById("login-id").value;
   const login_password = document.getElementById("Login-Password").value;
-  console.log(login_id, "\n", login_password);
-  if (await login_check_admin(login_id, login_password)) return true;
+  return await login_check_admin(login_id, login_password);
 }
 async function login_check_admin(login_id, login_password) {
+  var flag;
   const querySnapshot = await getDocs(collection(db, "AdminLogin"));
   querySnapshot.forEach((doc) => {
-    console.log(doc.id, " => ", doc.data());
-    // doc.data() is never undefined for query doc snapshots
     if (doc.id === login_id) {
       const pass = doc.data().Password;
       if (pass === login_password) {
-        console.log("admin login");
-        setTimeout(myURL, 100);
-        function myURL() {
-          // location.href = "admin/Admin-page.html";
-        }
-        return true;
+        flag=1;
       } else {
+        flag=0;
         alert("login_ID and Password doesn't match.");
-        return false;
       }
     }
      else {
+      flag=0;
       alert("Login_ID invalid.")
     }
   });
+  if(flag){
+    return new Promise((res)=>{res(true)});
+  }
+  return new Promise((res)=>{res(false)});
+
 }
-// async function login_check_user(login_id, login_password) {
-//   console.log("in");
-//   var flag=0;
-//   const querySnapshot = await getDocs(collection(db, "Register"));
-//   console.log("query");
-//   querySnapshot.forEach((doc) => {
-//     console.log(doc.id);
-//     if (doc.id === login_id) {
-//       console.log("got doc");
-//       const pass = doc.data().Password;
-//       console.log(pass);
-//       if (pass === login_password) {
-//         console.log("user login");
-//         setTimeout(myURL, 100);
-//         function myURL() {
-//           location.href = "Homepage.html";
-//         }
-//         flag=1;
-//       } else {
-//         alert("login_ID and Password doesn't match.");
-//       }
-//     }
-//   });
-//   if (flag===1){
-//     return true;
-//   }
-//   else{
-//     // alert("Login_ID not found. Kindly register.");
-//     return false;
-//   }
-    
-// }
 async function login_page() {
-  await login_form();
-  return "complete";
+  return await login_form();
 }
 
 export { login_page };
