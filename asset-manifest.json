@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.fa3bdb35.css",
-    "main.js": "/static/js/main.a8e6e28d.js",
+    "main.js": "/static/js/main.79ecb755.js",
     "static/js/27.39ec89dd.chunk.js": "/static/js/27.39ec89dd.chunk.js",
     "static/media/Homepage_blood.gif": "/static/media/Homepage_blood.2369119fedc39ce08667.gif",
     "static/media/harsha.jpg": "/static/media/harsha.34839d6abd2e135bf4d2.jpg",
@@ -21,6 +21,6 @@
   },
   "entrypoints": [
     "static/css/main.fa3bdb35.css",
-    "static/js/main.a8e6e28d.js"
+    "static/js/main.79ecb755.js"
   ]
 }
