@@ -31,17 +31,20 @@ export default function App() {
   //   // script.setAttribute("type", "module");
   // }, []);
 
-  const [navtoggle, setNavToggle] = useState(true);
+  const [navtoggle, setNavToggle] = useState(false);
   var path_location = useLocation();
 
   useEffect(() => {
     if (
-      path_location.pathname === "/dashboard" ||
-      path_location.pathname === "/admindonatepage" ||
-      path_location.pathname === "/adminlogin" ||
-      path_location.pathname === "/adminrequestpage"
+      path_location.pathname === "/" ||
+      path_location.pathname === "/about" ||
+      path_location.pathname === "/request" ||
+      path_location.pathname === "/donate"
     ) {
       setNavToggle(!navtoggle);
+    }
+    else{
+      setNavToggle(navtoggle => false)
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
