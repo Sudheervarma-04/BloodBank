@@ -32,7 +32,7 @@ export default function Dashboard() {
               </Link>
             </li>
             <li className="list">
-              <Link to="/adminlogin" className="nav-link">
+              <Link to="/admin" className="nav-link">
                 <i className="bx bx-log-out log-out"></i>
                 <span className="link">Log-out</span>
               </Link>
