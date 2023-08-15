@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/Bloodbank_react/static/css/main.cd7063b8.css",
-    "main.js": "/Bloodbank_react/static/js/main.038f9fd3.js",
-    "static/js/27.39ec89dd.chunk.js": "/Bloodbank_react/static/js/27.39ec89dd.chunk.js",
-    "static/media/Homepage_blood.gif": "/Bloodbank_react/static/media/Homepage_blood.2369119fedc39ce08667.gif",
-    "static/media/harsha.jpg": "/Bloodbank_react/static/media/harsha.34839d6abd2e135bf4d2.jpg",
-    "static/media/GIMSR(Front).webp": "/Bloodbank_react/static/media/GIMSR(Front).dd7971c46441632b4fcc.webp",
-    "static/media/gbox2.jpg": "/Bloodbank_react/static/media/gbox2.adc8a62326f5bc7bfe74.jpg",
-    "static/media/bloodbank logo.png": "/Bloodbank_react/static/media/bloodbank logo.cbd37e3b865012682781.png",
-    "static/media/blood-5053771.webp": "/Bloodbank_react/static/media/blood-5053771.75cf83d0f2aed26f47b8.webp",
-    "static/media/gbox3.jpg": "/Bloodbank_react/static/media/gbox3.4b8f8b3a2f4848bc2b5d.jpg",
-    "static/media/shashank.jpg": "/Bloodbank_react/static/media/shashank.75217b389440979cb7df.jpg",
-    "static/media/sudheer.jpg": "/Bloodbank_react/static/media/sudheer.dcb7ba1b6b32c08280d7.jpg",
-    "static/media/snehil.jpg": "/Bloodbank_react/static/media/snehil.1e2aab5687488083b52a.jpg",
-    "static/media/akash.jpg": "/Bloodbank_react/static/media/akash.58e0fdcfd1f56c710f90.jpg",
-    "static/media/GITAM Drone.webp": "/Bloodbank_react/static/media/GITAM Drone.9a930257e1b17622d385.webp",
-    "static/media/Blood7.webp": "/Bloodbank_react/static/media/Blood7.6141f4f0c8a90ad07150.webp",
-    "static/media/YASHWANTSIR.webp": "/Bloodbank_react/static/media/YASHWANTSIR.36a85cc68099bfa3282b.webp",
-    "index.html": "/Bloodbank_react/index.html"
+    "main.css": "/static/css/main.94e19c3b.css",
+    "main.js": "/static/js/main.ad63e6ca.js",
+    "static/js/27.39ec89dd.chunk.js": "/static/js/27.39ec89dd.chunk.js",
+    "static/media/Homepage_blood.gif": "/static/media/Homepage_blood.2369119fedc39ce08667.gif",
+    "static/media/harsha.jpg": "/static/media/harsha.34839d6abd2e135bf4d2.jpg",
+    "static/media/GIMSR(Front).webp": "/static/media/GIMSR(Front).dd7971c46441632b4fcc.webp",
+    "static/media/gbox2.jpg": "/static/media/gbox2.adc8a62326f5bc7bfe74.jpg",
+    "static/media/bloodbank logo.png": "/static/media/bloodbank logo.cbd37e3b865012682781.png",
+    "static/media/blood-5053771.webp": "/static/media/blood-5053771.75cf83d0f2aed26f47b8.webp",
+    "static/media/gbox3.jpg": "/static/media/gbox3.4b8f8b3a2f4848bc2b5d.jpg",
+    "static/media/shashank.jpg": "/static/media/shashank.75217b389440979cb7df.jpg",
+    "static/media/sudheer.jpg": "/static/media/sudheer.dcb7ba1b6b32c08280d7.jpg",
+    "static/media/snehil.jpg": "/static/media/snehil.1e2aab5687488083b52a.jpg",
+    "static/media/akash.jpg": "/static/media/akash.58e0fdcfd1f56c710f90.jpg",
+    "static/media/GITAM Drone.webp": "/static/media/GITAM Drone.9a930257e1b17622d385.webp",
+    "static/media/Blood7.webp": "/static/media/Blood7.6141f4f0c8a90ad07150.webp",
+    "static/media/YASHWANTSIR.webp": "/static/media/YASHWANTSIR.36a85cc68099bfa3282b.webp",
+    "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.cd7063b8.css",
-    "static/js/main.038f9fd3.js"
+    "static/css/main.94e19c3b.css",
+    "static/js/main.ad63e6ca.js"
   ]
 }
