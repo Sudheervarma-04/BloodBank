@@ -33,12 +33,12 @@ export default function App() {
 
   useEffect(() => {
     if (
-      path_location.pathname !== "/" ||
-      path_location.pathname !== "/about" ||
-      path_location.pathname !== "/request" ||
-      path_location.pathname !== "/donate"
+      path_location.pathname === "/" ||
+      (path_location.pathname === "/about" ||  path_location.pathname === "/About")||
+      (path_location.pathname === "/request" || path_location.pathname === "/Request")||
+      (path_location.pathname === "/donate" || path_location.pathname === "/Donate")
     ) {
-      setNavToggle(navtoggle);
+      setNavToggle((navtoggle) => true);
     } else {
       setNavToggle((navtoggle) => false);
     }
@@ -50,10 +50,10 @@ export default function App() {
       <ScrollToTop />
       <Routes>
         <Route exact path="/" index element={<Home />} />
-        `<Route path="/about" element={<About />} />
+        <Route path="/about" element={<About />} />
         <Route path="/donate" element={<DonateNew />} />
         <Route path="/request" element={<RequestNew />} />
-        <Route path="/adminlogin" element={<AdminLogin />} />
+        <Route path="/admin" element={<AdminLogin />} />
       </Routes>
     </div>
   );
