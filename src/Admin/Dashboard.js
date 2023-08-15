@@ -20,12 +20,6 @@ export default function Dashboard() {
         <div className="sidebar-content">
           <ul className="lists">
             <li className="list">
-              <Link to="/admin" className="nav-link">
-                <i className="bx bxs-dashboard dash-board"></i>
-                <span className="link">Dashboard</span>
-              </Link>
-            </li>
-            <li className="list">
               <Link to="/admindonatepage" className="nav-link">
                 <i className="bx bxs-donate-blood donate-blood"></i>
                 <span className="link">Donations</span>

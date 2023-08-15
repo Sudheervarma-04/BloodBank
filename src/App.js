@@ -4,9 +4,6 @@ import Home from "../src/Main/Home";
 import About from "../src/Main/About";
 import Navbar from "./components/Navbar";
 import AdminLogin from "./Admin/AdminLogin";
-import Dashboard from "./Admin/Dashboard";
-import AdminDonationPage from "./Admin/AdminDonationpage";
-import AdminRequestPage from "./Admin/AdminRequestpage";
 import { ScrollToTop } from "./components/scrolltoTop";
 import { useEffect, useState } from "react";
 import DonateNew from "./Main/DonatePage";
@@ -31,20 +28,19 @@ export default function App() {
   //   // script.setAttribute("type", "module");
   // }, []);
 
-  const [navtoggle, setNavToggle] = useState(false);
+  const [navtoggle, setNavToggle] = useState(true);
   var path_location = useLocation();
 
   useEffect(() => {
     if (
-      path_location.pathname === "/" ||
-      path_location.pathname === "/about" ||
-      path_location.pathname === "/request" ||
-      path_location.pathname === "/donate"
+      path_location.pathname !== "/" ||
+      path_location.pathname !== "/about" ||
+      path_location.pathname !== "/request" ||
+      path_location.pathname !== "/donate"
     ) {
-      setNavToggle(!navtoggle);
-    }
-    else{
-      setNavToggle(navtoggle => false)
+      setNavToggle(navtoggle);
+    } else {
+      setNavToggle((navtoggle) => false);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -58,9 +54,6 @@ export default function App() {
         <Route path="/donate" element={<DonateNew />} />
         <Route path="/request" element={<RequestNew />} />
         <Route path="/adminlogin" element={<AdminLogin />} />
-        {/* <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="/admindonatepage" element={<AdminDonationPage />} />
-        <Route path="/adminrequestpage" element={<AdminRequestPage />} /> */}
       </Routes>
     </div>
   );

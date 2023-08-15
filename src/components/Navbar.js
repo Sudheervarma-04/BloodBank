@@ -31,13 +31,13 @@ export default function Navbar() {
   }
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-black fixed-top">
+      <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-black">
         <div className="container-fluid">
           <Link to="/">
           <img
             src={img1}
             alt="Logo"
-            className="d-inline-block align-text-top nav-logo-custom"
+            className="d-inline-bloc align-text-top nav-logo-custom"
           />
           </Link>
           <button
@@ -51,7 +51,7 @@ export default function Navbar() {
           <div
             className={
               toggle
-                ? "collpase navbar-collapse justify-content-end custom-nav-div"
+                ? "collpase navbar-collapse justify-content-end custom-nav-div bg-black"
                 : "collapse navbar-collapse justify-content-end custom-nav-hide"
             }
             id="collapsibleNavbar"

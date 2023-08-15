@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "../project_styles/Login.css";
 import { login_page } from "../project_scripts/login_db";
-import Dashboard  from "./Dashboard";
+import Dashboard from "./Dashboard";
+import { Route,  Routes } from "react-router-dom";
+import AdminDonationPage from "./AdminDonationpage";
+import AdminRequestPage from "./AdminRequestpage";
 
 export default function AdminLogin({ loggin_info }) {
   const [loggedIn, setLoggedin] = useState(false);
   async function adminLoad() {
     var res = await login_page();
-    if (res ) {
-      
+    if (res) {
       setLoggedin(!loggedIn);
     }
   }
@@ -37,7 +39,13 @@ export default function AdminLogin({ loggin_info }) {
   return (
     <>
       {loggedIn ? (
-        <Dashboard />
+        <>
+          <Dashboard />
+          <Routes>
+            <Route path="/admindonatepage" element={<AdminDonationPage />} />
+            <Route path="/adminrequestpage" element={<AdminRequestPage />} />
+          </Routes>
+        </>
       ) : (
         <div className="adminloginbody">
           <div className="login-page">
