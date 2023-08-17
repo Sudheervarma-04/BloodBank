@@ -11,12 +11,6 @@ export default function Dashboard() {
         <span className="logo-name">GITAM Blood Bank</span>
       </div>
 
-      <div className="sidebar">
-        <div className="logo">
-          <i className="bx bx-menu menu-icon"></i>
-          <span className="logo-name">GITAM Blood Bank</span>
-        </div>
-
         <div className="sidebar-content">
           <ul className="lists">
             <li className="list">
@@ -32,7 +26,7 @@ export default function Dashboard() {
               </Link>
             </li>
             <li className="list">
-              <Link to="/adminlogin" className="nav-link">
+              <Link to="/admin" className="nav-link">
                 <i className="bx bx-log-out log-out"></i>
                 <span className="link">Log-out</span>
               </Link>
@@ -40,6 +34,5 @@ export default function Dashboard() {
           </ul>
         </div>
       </div>
-    </div>
   );
 }
