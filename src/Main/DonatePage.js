@@ -42,7 +42,6 @@ export default function DonateNew() {
               <p id="donator_blood_error"></p>
             </Col>
           </Row>
-          <br />
           <Row>
             <Col className="col-md-6 col-12">
               <Form.Label style={{ color: "white" }}>Email</Form.Label>
@@ -65,7 +64,6 @@ export default function DonateNew() {
               <p id="donator_gender_error"></p>
             </Col>
           </Row>
-          <br />
           <Row>
             <Col className="col-md-6 col-12">
               <Form.Label style={{ color: "white" }}>Phone number</Form.Label>

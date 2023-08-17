@@ -41,7 +41,6 @@ export default function RequestNew() {
               <p id="patient_blood_error"></p>
             </Col>
           </Row>
-          <br />
           <Row>
             <Col className="col-md-6 col-12">
               <Form.Label style={{ color: "white" }}>Email</Form.Label>
@@ -64,7 +63,6 @@ export default function RequestNew() {
               <p id="patient_phone_error"></p>
             </Col>
           </Row>
-          <br />
           <Row>
             <Col className="col-md-6 col-12">
               <Form.Label style={{ color: "white" }}>Gender</Form.Label>
@@ -87,7 +85,6 @@ export default function RequestNew() {
               <p id="patient_required_error"></p>
             </Col>
           </Row>
-          <br />
           <Row>
             <Col className="col-md-6 col-12">
               <Form.Label style={{ color: "white" }}>AGE</Form.Label>
