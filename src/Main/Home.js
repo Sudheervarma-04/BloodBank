@@ -53,38 +53,6 @@ export default function Home() {
               <img
                 className="rounded img-fluid d-block w-100 fit-cover"
                 style={{ height: 200 }}
-                src={img3}
-                alt="$"
-              />
-              <div className="py-4">
-                <center>
-                  <h4>
-                    <Link to="/donate" style={{ color: "#000000" }}>
-                      <strong>Donate</strong>
-                    </Link>
-                  </h4>
-                </center>
-                <p>
-                  <span
-                    style={{
-                      color: "rgb(0, 0, 0)",
-                      fontWeight: 500,
-                      fontSize: 18,
-                    }}
-                  >
-                    Donors who want to donate Blood can donate via Donate option
-                    in our Homepage.
-                  </span>
-                  <br />
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div>
-              <img
-                className="rounded img-fluid d-block w-100 fit-cover"
-                style={{ height: 200 }}
                 src={img5}
                 alt="$"
               />
@@ -106,6 +74,38 @@ export default function Home() {
                   >
                     An initiative by a group of Computer Science and Engineering
                     undergrads from GITAM University, Visakhapatnam!
+                  </span>
+                  <br />
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="col">
+            <div>
+              <img
+                className="rounded img-fluid d-block w-100 fit-cover"
+                style={{ height: 200 }}
+                src={img3}
+                alt="$"
+              />
+              <div className="py-4">
+                <center>
+                  <h4>
+                    <Link to="/donate" style={{ color: "#000000" }}>
+                      <strong>Donate</strong>
+                    </Link>
+                  </h4>
+                </center>
+                <p>
+                  <span
+                    style={{
+                      color: "rgb(0, 0, 0)",
+                      fontWeight: 500,
+                      fontSize: 18,
+                    }}
+                  >
+                    Donors who want to donate Blood can donate via Donate option
+                    in our Homepage.
                   </span>
                   <br />
                 </p>
@@ -161,15 +161,12 @@ export default function Home() {
           </div>
           <div className="col-sm-6 col-md-4 footer-contacts">
             <div>
-              <Link href="https://goo.gl/maps/bFanvvmbxhrSjWVC7" target="_blank">
-                <span className="fa fa-map-marker footer-contacts-icon"> </span>
-              </Link>
-              <Link href="https://goo.gl/maps/bFanvvmbxhrSjWVC7" target="_blank">
+              <a href="https://goo.gl/maps/bFanvvmbxhrSjWVC7" target="_blank" rel="noreferrer">
                 <p>
                   <span className="new-line-span">Gandhi Nagar,Rushikonda</span>
                   Visakhapatnam, Andhra Pradesh-530045
                 </p>
-              </Link>
+              </a>
             </div>
             <div>
               <i className="fa fa-phone footer-contacts-icon"></i>
