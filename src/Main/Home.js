@@ -32,7 +32,6 @@ export default function Home() {
         className="carousel slide animate_text post_carousel_wrapper swipe_x ps_easeOutCirc"
         data-ride="carousel"
       >
-
         <div className="carousel-inner" role="listbox">
           <div className="carousel-item active">
             <img src={img2} alt="video" />
@@ -146,24 +145,31 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <footer>
-        <div className="row">
-          <div className="col-sm-6 col-md-4 footer-navigation">
-            <h3 style={{fontFamily: "sans-serif"}}>GITAMBloodBank</h3>
-            <p className="links">
-              <Link to="/donate">Donate</Link>
-              <strong> · </strong>
-              <Link to="/request">Request</Link>
-              <strong> · </strong>
-              <Link to="/about">About</Link>
-              <strong>&nbsp;</strong>
-            </p>
-          </div>
-          <div className="col-sm-6 col-md-4 footer-contacts">
+      <div className="custom-footer">
+        <div className="footer-navigation footer-subcol">
+          <p style={{ fontFamily: "sans-serif" }} className="sub-col-web-name">GITAMBloodBank</p>
+          <p className="links">
+            <Link to="/donate">
+              <strong> · </strong>Donate
+            </Link>
+            <Link to="/request">
+              <strong> · </strong>Request
+            </Link>
+            <Link to="/about">
+              <strong> · </strong>About
+            </Link>
+          </p>
+        </div>
+          <div className="footer-contacts footer-subcol">
             <div>
-              <a href="https://goo.gl/maps/bFanvvmbxhrSjWVC7" target="_blank" rel="noreferrer">
+              <a
+                href="https://goo.gl/maps/bFanvvmbxhrSjWVC7"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <p>
-                  <span className="new-line-span">Gandhi Nagar,Rushikonda</span>
+                  Gandhi Nagar,Rushikonda
+                  <br />
                   Visakhapatnam, Andhra Pradesh-530045
                 </p>
               </a>
@@ -171,24 +177,35 @@ export default function Home() {
             <div>
               <i className="fa fa-phone footer-contacts-icon"></i>
               <p className="footer-center-info email text-start">
-                <Link href="#" style={{ color: "#ffffff" }}>
+                <a
+                  href="tel:+919885096787"
+                  style={{ color: "#ffffff" }}
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   +91 98850 96787
-                </Link>
+                </a>
               </p>
             </div>
             <div>
               <i className="fa fa-envelope footer-contacts-icon"></i>
               <p>
-                {" "}
                 <Link style={{ color: "rgb(255, 255, 255)" }}>
                   gitambloodbank@gmail.com
                 </Link>
               </p>
             </div>
           </div>
-          <div className="col-md-4 footer-about">
+          <div className="footer-about footer-subcol">
             <h4>
-              <Link href="./aboutus.html" style={{ color: "#ffffff" }}>
+              <Link
+                to="./about"
+                style={{
+                  color: "#ffffff",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
                 About
               </Link>
             </h4>
@@ -198,8 +215,7 @@ export default function Home() {
               with Blood Donation/Acceptance.
             </p>
           </div>
-        </div>
-      </footer>
+      </div>
     </div>
   );
 }
