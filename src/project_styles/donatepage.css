@@ -1,7 +1,9 @@
 .background-from-pages{
   min-height: 100vh;
   background-color: #0f0f0f;
-  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
 }
 
 .class1
