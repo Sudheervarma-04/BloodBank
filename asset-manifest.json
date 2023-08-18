@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.5737f825.css",
+    "main.css": "/static/css/main.c1b67165.css",
     "main.js": "/static/js/main.0d6b1eb7.js",
     "static/js/27.39ec89dd.chunk.js": "/static/js/27.39ec89dd.chunk.js",
     "static/media/Homepage_blood.gif": "/static/media/Homepage_blood.2369119fedc39ce08667.gif",
@@ -20,7 +20,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.5737f825.css",
+    "static/css/main.c1b67165.css",
     "static/js/main.0d6b1eb7.js"
   ]
 }
