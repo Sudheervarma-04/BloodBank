@@ -2,6 +2,8 @@
   font-family: 'system-ui'
 }
 .admindonationbody{
+  padding-top: 100px;
+  min-height: 100vh;
   background-image:linear-gradient(rgba(65,80,90,0.6),rgba(65, 80, 90, 0.6));
   background-size: 100%; 
 }

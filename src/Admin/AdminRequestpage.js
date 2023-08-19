@@ -5,7 +5,7 @@ import '../project_scripts/dashboard'
 export default function AdminRequestPage(){
     return(
         <div className='admindonationbody'>
-            <h1 className="Donation_details">DONATION DETAILS</h1>
+            <h1 className="Donation_details">REQUEST DETAILS</h1>
             <p className="select">Select blood group to view details</p>
             <div className="dropbtn">
             <select id="Blood_group_request" required>

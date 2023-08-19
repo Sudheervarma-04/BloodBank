@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import "../project_styles/Login.css";
 import { login_page } from "../project_scripts/login_db";
@@ -41,10 +42,6 @@ export default function AdminLogin({ loggin_info }) {
       {loggedIn ? (
         <>
           <Dashboard />
-          <Routes>
-            <Route path="/admindonatepage" element={<AdminDonationPage />} />
-            <Route path="/adminrequestpage" element={<AdminRequestPage />} />
-          </Routes>
         </>
       ) : (
         <div className="adminloginbody">
