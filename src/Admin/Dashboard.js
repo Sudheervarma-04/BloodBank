@@ -41,6 +41,9 @@ export default function Navbar() {
     setToggle(!toggle);
   }
 
+  function closewindow(){
+    window.open("/", "_self");
+  }
   return (
     <div className="admin-body">
       <nav className="navbar navbar-expand-lg navbar-dark fixed-top bg-black">
@@ -78,7 +81,7 @@ export default function Navbar() {
               </Link>
               <Link
                 className="nav-link active"
-                to ="/admin"
+                onClick={closewindow}
               >
                 Logout
               </Link>

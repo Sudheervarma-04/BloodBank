@@ -33,14 +33,11 @@ export default function App() {
 
   useEffect(() => {
     if (
-      path_location.pathname === "/" ||
-      (path_location.pathname === "/about" ||  path_location.pathname === "/About")||
-      (path_location.pathname === "/request" || path_location.pathname === "/Request")||
-      (path_location.pathname === "/donate" || path_location.pathname === "/Donate")
+      path_location.pathname === "/admin"
     ) {
-      setNavToggle((navtoggle) => true);
-    } else {
       setNavToggle((navtoggle) => false);
+    } else {
+      setNavToggle((navtoggle) => true);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
