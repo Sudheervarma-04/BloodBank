@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.aa82cf9d.css",
-    "main.js": "/static/js/main.9d6f8aea.js",
+    "main.css": "/static/css/main.88891741.css",
+    "main.js": "/static/js/main.2a67c5a7.js",
     "static/js/27.39ec89dd.chunk.js": "/static/js/27.39ec89dd.chunk.js",
     "static/media/Homepage_blood.gif": "/static/media/Homepage_blood.2369119fedc39ce08667.gif",
     "static/media/harsha.jpg": "/static/media/harsha.34839d6abd2e135bf4d2.jpg",
@@ -20,7 +20,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.aa82cf9d.css",
-    "static/js/main.9d6f8aea.js"
+    "static/css/main.88891741.css",
+    "static/js/main.2a67c5a7.js"
   ]
 }
